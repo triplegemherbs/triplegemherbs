@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triple Gem Herbs</title>
+  <style>
+    :root {
+      --primary-green: #254117;
+      --light-green: #eaf5e3;
+      --accent-color: #5a7c60;
+      --font-serif: 'Georgia', serif;
+      --font-sans: 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-serif);
+      background-color: #fff;
+      color: var(--primary-green);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--light-green);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: var(--primary-green);
+    }
+
+    .tagline {
+      font-style: italic;
+      color: var(--accent-color);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 1rem 0;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary-green);
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--light-green);
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+      color: var(--primary-green);
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-width: 500px;
+      margin-top: 1rem;
+    }
+
+    input, textarea, button {
+      font-family: var(--font-sans);
+      padding: 0.5rem;
+      border: 1px solid var(--accent-color);
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: var(--primary-green);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: var(--accent-color);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--light-green);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Triple Gem Herbs</h1>
+    <p class="tagline">Science meets tradition in herbal care</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#offerings">Offerings</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Jasmine</h2>
+    <p>Jasmine Zenderland is a botanist, educator, and herbalist integrating rigorous science with traditional plant wisdom. She offers botanical experiences and education rooted in connection, curiosity, and care.</p>
+  </section>
+
+  <section id="offerings">
+    <h2>Offerings</h2>
+    <ul>
+      <li><strong>Consultations:</strong> Personalized herbal guidance</li>
+      <li><strong>Classes & Workshops:</strong> Online and in-person learning</li>
+      <li><strong>Foraging Walks:</strong> Seasonal guided walks in nature</li>
+      <li><strong>Custom Experiences:</strong> Herbal sessions for visitors, locals, and private groups</li>
+    </ul>
+  </section>
+
+  <section id="events">
+    <h2>Upcoming Events</h2>
+    <p>Check back soon for our summer workshops and herbal walks!</p>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <p>Coming soon: articles on herbs for yoga, plant energetics, and modern herbal science.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+    <p>Email: <a href="mailto:hello@triplegemherbs.com">hello@triplegemherbs.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Triple Gem Herbs. All rights reserved.</p>
+  </footer>
+</body>
+</html>
