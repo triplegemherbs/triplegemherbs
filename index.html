@@ -5,104 +5,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Triple Gem Herbs</title>
   <style>
-    :root {
-      --primary-green: #254117;
-      --light-green: #eaf5e3;
-      --accent-color: #5a7c60;
-      --font-serif: 'Georgia', serif;
-      --font-sans: 'Helvetica Neue', sans-serif;
-    }
+  :root {
+    --primary-green: #254117;
+    --light-green: #eaf5e3;
+    --accent-color: #5a7c60;
+    --font-serif: 'Georgia', serif;
+    --font-sans: 'Helvetica Neue', sans-serif;
+  }
 
-    body {
-      margin: 0;
-      font-family: var(--font-serif);
-      background-color: #fff;
-      color: var(--primary-green);
-      line-height: 1.6;
-    }
+  body {
+    margin: 0;
+    font-family: var(--font-serif);
+    background-color: #fff;
+    color: var(--primary-green);
+    line-height: 1.6;
+  }
 
-    header {
-      background-color: var(--light-green);
-      padding: 2rem;
-      text-align: center;
-    }
+  header {
+    background-color: var(--light-green);
+    padding: 2rem 1rem;
+    text-align: center;
+  }
 
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--primary-green);
+  }
+
+  .tagline {
+    font-style: italic;
+    color: var(--accent-color);
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--primary-green);
+    font-weight: bold;
+    padding: 0.5rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  h2 {
+    border-bottom: 2px solid var(--light-green);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    color: var(--primary-green);
+    font-size: 1.5rem;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 500px;
+    margin-top: 1rem;
+  }
+
+  input, textarea, button {
+    font-family: var(--font-sans);
+    padding: 0.75rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  button {
+    background-color: var(--primary-green);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: var(--accent-color);
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--light-green);
+    font-size: 0.9rem;
+  }
+
+  /* ✅ Responsive styles */
+  @media (max-width: 600px) {
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: var(--primary-green);
-    }
-
-    .tagline {
-      font-style: italic;
-      color: var(--accent-color);
+      font-size: 2rem;
     }
 
     nav ul {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      list-style: none;
-      padding: 1rem 0;
-      margin: 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--primary-green);
-      font-weight: bold;
+      flex-direction: column;
+      align-items: center;
     }
 
     section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    h2 {
-      border-bottom: 2px solid var(--light-green);
-      padding-bottom: 0.5rem;
-      margin-top: 2rem;
-      color: var(--primary-green);
-    }
-
-    ul {
-      padding-left: 1.5rem;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      max-width: 500px;
-      margin-top: 1rem;
+      padding: 1.5rem 1rem;
     }
 
     input, textarea, button {
-      font-family: var(--font-sans);
-      padding: 0.5rem;
-      border: 1px solid var(--accent-color);
-      border-radius: 4px;
+      font-size: 1rem;
     }
+  }
+</style>
 
-    button {
-      background-color: var(--primary-green);
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: var(--accent-color);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: var(--light-green);
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
 <body>
   <header>
