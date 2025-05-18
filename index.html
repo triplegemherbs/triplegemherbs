@@ -107,6 +107,20 @@
     font-size: 0.9rem;
   }
 
+  /* Styles for two photos side by side */
+  .about-images {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-images img {
+    max-width: 200px;
+    border-radius: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
   /* ✅ Responsive styles */
   @media (max-width: 600px) {
     header h1 {
@@ -125,8 +139,18 @@
     input, textarea, button {
       font-size: 1rem;
     }
+
+    /* Stack images vertically on small screens */
+    .about-images {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-images img {
+      max-width: 150px;
+    }
   }
-</style>
+  </style>
 
 </head>
 <body>
@@ -145,20 +169,22 @@
     </nav>
   </header>
 
-<section id="about">
-  <h2>About Jasmine</h2>
-  <img src="jasmine.jpg" alt="Photo of Jasmine Zenderland" style="max-width: 200px; border-radius: 100px; float: left; margin-right: 1rem;">
-  <p>
-    Jasmine Zenderland is a botanist, educator, and herbalist who brings together scientific rigor and traditional plant knowledge to support holistic understanding and personal empowerment. With deep roots in both academic research and community-based herbalism, Jasmine bridges worlds to make plant wisdom accessible, meaningful, and transformative.
-  </p>
-  <p>
-    Through Triple Gem Herbs, she offers one-on-one herbal consulting, plant walks, immersive workshops, and educational programs that honor both evidence-based approaches and ancestral traditions. Her work is rooted in connection — to plants, to people, and to place — and guided by curiosity, integrity, and care.
-  </p>
-  <p>
-    Whether you're seeking personal guidance, deepening your herbal knowledge, or cultivating a stronger relationship with the natural world, Jasmine creates a space where science meets tradition — and where healing, learning, and growth can unfold.
-  </p>
-</section>
-
+  <section id="about">
+    <h2>About Jasmine</h2>
+    <div class="about-images">
+      <img src="jasmine.jpg" alt="Photo of Jasmine Zenderland" />
+      <img src="jasmine2.jpg" alt="Photo of Jasmine Zenderland 2" />
+    </div>
+    <p>
+      Jasmine Zenderland is a botanist, educator, and herbalist who brings together scientific rigor and traditional plant knowledge to support holistic understanding and personal empowerment. With deep roots in both academic research and community-based herbalism, Jasmine bridges worlds to make plant wisdom accessible, meaningful, and transformative.
+    </p>
+    <p>
+      Through Triple Gem Herbs, she offers one-on-one herbal consulting, plant walks, immersive workshops, and educational programs that honor both evidence-based approaches and ancestral traditions. Her work is rooted in connection — to plants, to people, and to place — and guided by curiosity, integrity, and care.
+    </p>
+    <p>
+      Whether you're seeking personal guidance, deepening your herbal knowledge, or cultivating a stronger relationship with the natural world, Jasmine creates a space where science meets tradition — and where healing, learning, and growth can unfold.
+    </p>
+  </section>
 
   <section id="offerings">
     <h2>Offerings</h2>
@@ -177,7 +203,7 @@
 
   <section id="contact">
     <h2>Contact</h2>
- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf7jqid133_2frnXXX8dXt4ohwAALdVuHgyn7K1QARzbEYwbA/viewform?embedded=true" width="100%" height="900px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf7jqid133_2frnXXX8dXt4ohwAALdVuHgyn7K1QARzbEYwbA/viewform?embedded=true" width="100%" height="900px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </section>
 
   <footer>
