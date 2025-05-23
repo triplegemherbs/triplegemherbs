@@ -176,28 +176,22 @@
     <p>Check back soon for our summer workshops and herbal walks!</p>
   </section>
 
-<section id="instagram" style="max-width: 800px; margin: auto; padding: 2rem 1rem;">
+<section id="instagram" style="max-width: 1100px; margin: auto; padding: 2rem 1rem;">
   <h2>From Instagram</h2>
   <style>
     .instagram-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
       justify-items: center;
     }
 
     .instagram-grid blockquote {
       width: 100%;
-      max-width: 220px;
+      max-width: 340px;
     }
 
-    @media (max-width: 768px) {
-      .instagram-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 480px) {
+    @media (max-width: 375px) {
       .instagram-grid {
         grid-template-columns: 1fr;
       }
