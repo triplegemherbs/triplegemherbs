@@ -4,18 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Triple Gem Herbs</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Special+Elite&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --primary-green: #254117;
-      --light-green: #eaf5e3;
-      --accent-color: #5a7c60;
-      --font-serif: 'Georgia', serif;
-      --font-sans: 'Helvetica Neue', sans-serif;
+      --primary-green: #8B3A62; /* Burgundy */
+      --light-green: #F5EFE6; /* Warm beige */
+      --accent-color: #C56C3D; /* Burnt sienna */
+      --font-header: 'Special Elite', serif;
+      --font-body: 'Lora', serif;
     }
 
     body {
       margin: 0;
-      font-family: var(--font-serif);
+      font-family: var(--font-body);
       background-color: #fff;
       color: var(--primary-green);
       line-height: 1.6;
@@ -30,7 +34,7 @@
     header h1 {
       margin: 0;
       font-size: 2.5rem;
-      color: var(--primary-green);
+      font-family: var(--font-header);
     }
 
     .tagline {
@@ -67,6 +71,7 @@
       margin-top: 2rem;
       color: var(--primary-green);
       font-size: 1.5rem;
+      font-family: var(--font-header);
     }
 
     ul {
@@ -82,7 +87,7 @@
     }
 
     input, textarea, button {
-      font-family: var(--font-sans);
+      font-family: var(--font-body);
       padding: 0.75rem;
       border: 1px solid var(--accent-color);
       border-radius: 4px;
@@ -107,6 +112,41 @@
       font-size: 0.9rem;
     }
 
+    .cta-box {
+      background-color: var(--light-green);
+      padding: 2rem;
+      text-align: center;
+      border-radius: 1rem;
+      margin: 2rem auto;
+      max-width: 700px;
+    }
+
+    .cta-box h2 {
+      font-family: var(--font-header);
+      color: var(--primary-green);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-box p {
+      font-family: var(--font-body);
+      color: #2F2F2F;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .cta-box a {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--primary-green);
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      font-family: var(--font-body);
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;
@@ -123,14 +163,6 @@
 
       input, textarea, button {
         font-size: 1rem;
-      }
-
-      #about img {
-        float: none !important;
-        display: block;
-        margin: 1rem auto;
-        max-width: 150px;
-        height: auto;
       }
     }
   </style>
@@ -153,83 +185,40 @@
 
   <section id="about">
     <h2>About Jasmine</h2>
-    <img src="jasmine.jpg" alt="Photo of Jasmine Zenderland" style="width: 180px; height: 180px; border-radius: 50%; float: left; margin-right: 1.5rem; margin-bottom: 1rem; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid var(--accent-color);" />
-    <p>Jasmine Zenderland is a botanist, educator, and herbalist who brings together scientific rigor and traditional plant knowledge to support holistic understanding and personal empowerment. With deep roots in both academic research and community-based herbalism, Jasmine bridges worlds to make plant wisdom accessible, meaningful, and transformative.</p>
-    <p>Through Triple Gem Herbs, she offers one-on-one herbal consulting, plant walks, immersive workshops, and educational programs that honor both evidence-based approaches and ancestral traditions. Her work is rooted in connection — to plants, to people, and to place — and guided by curiosity, integrity, and care.</p>
-    <img src="jasmine2.jpeg" alt="Another photo related to Jasmine or her work" style="width: 140px; height: 140px; border-radius: 50%; float: right; margin-left: 1.5rem; margin-top: 3rem; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 2px solid var(--accent-color);" />
-    <p>Whether you're seeking personal guidance, deepening your herbal knowledge, or cultivating a stronger relationship with the natural world, Jasmine creates a space where science meets tradition — and where healing, learning, and growth can unfold.</p>
-    <div style="clear: both;"></div>
+    <p>Jasmine Zenderland is a botanist, educator, and herbalist who brings together scientific rigor and traditional plant knowledge to support holistic understanding and personal empowerment. Through Triple Gem Herbs, she offers herbal consulting, plant walks, and educational programs that blend evidence-based practice with ancestral traditions.</p>
   </section>
 
   <section id="offerings">
     <h2>Offerings</h2>
     <ul>
-      <li><strong>Consultations:</strong> 1:1 Personalized herbal guidance</li>
-      <li><strong>Classes & Workshops:</strong> Online and in-person learning</li>
-      <li><strong>Foraging Walks:</strong> Seasonal plant identification walks and foraging</li>
-      <li><strong>Custom Experiences:</strong> Custom classes, workshops, and botanical experiences</li>
+      <li><strong>Consultations:</strong> 1:1 personalized herbal guidance</li>
+      <li><strong>Workshops:</strong> Online and in-person learning</li>
+      <li><strong>Foraging Walks:</strong> Seasonal plant ID and foraging</li>
+      <li><strong>Custom Experiences:</strong> Private herbal events and classes</li>
     </ul>
   </section>
 
-<section id="free-guide" style="background-color:#F5EFE6; padding: 2rem; text-align: center; border-radius: 1rem; margin: 2rem auto; max-width: 700px;">
-  <h2 style="font-family: 'Special Elite', serif; color: #8B3A62; font-size: 1.8rem; margin-bottom: 1rem;">
-    Get Your Free Herbal Tea Guide
-  </h2>
-  <p style="font-family: 'Lora', serif; color: #2F2F2F; font-size: 1rem; line-height: 1.6;">
-    This free guide walks you through time-tested brewing techniques, seasonal energetics, and simple add-ins to get the most out of your herbal teas—grounded in tradition and backed by plant science.
-  </p>
-  <a href="https://account.beacons.ai/account/home/store?b=8967df73-bbf2-4e3b-a594-093a6885a475" target="_blank" style="display: inline-block; margin-top: 1.5rem; padding: 0.75rem 1.5rem; background-color: #8B3A62; color: #fff; text-decoration: none; font-weight: bold; border-radius: 8px; font-family: 'Lora', serif;">
-    Download the Free Guide
-  </a>
-</section>
+  <section id="free-guide" class="cta-box">
+    <h2>Get Your Free Herbal Tea Guide</h2>
+    <p>This free guide walks you through time-tested brewing techniques, seasonal energetics, and simple add-ins to get the most out of your herbal teas—grounded in tradition and backed by plant science.</p>
+    <a href="https://account.beacons.ai/account/home/store?b=8967df73-bbf2-4e3b-a594-093a6885a475" target="_blank">Download the Free Guide</a>
+  </section>
 
-  
- <section id="events">
-  <h2>Upcoming Events</h2>
+  <section id="events">
+    <h2>Upcoming Events</h2>
+    <p><strong>✨ Elixir Bar:</strong> Join us for handmade botanical drinks, tinctures, salves and more!</p>
+    <img src="elixir.PNG" alt="Elixir Event Flyer" style="width:100%; max-width:600px; border-radius: 8px; margin-top: 1rem;" />
+  </section>
 
-  <p><strong>✨ New Event:</strong> Join us for our Elixir Bar! Botanical drinks and handmade tinctures, salves and more! See the flyer below:</p>
-  <img src="elixir.PNG" alt="Elixir Making Workshop Flyer" style="width:100%; max-width:600px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #ccc; border-radius: 8px; margin-top: 1rem;" />
-</section>
-
-<section id="instagram" style="max-width: 1100px; margin: auto; padding: 2rem 1rem;">
-  <h2>From Instagram</h2>
-  <style>
-    .instagram-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 30px;
-      justify-items: center;
-    }
-
-    .instagram-grid blockquote {
-      width: 100%;
-      max-width: 340px;
-    }
-
-    @media (max-width: 375px) {
-      .instagram-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-
-  <div class="instagram-grid">
-    <div><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJ6v2VsRsTg/" data-instgrm-version="14"></blockquote></div>
-    <div><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJqE6LFRMtr/" data-instgrm-version="14"></blockquote></div>
-    <div><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJmzrVlhtMW/" data-instgrm-version="14"></blockquote></div>
-    <div><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJiQ2W1xum8/" data-instgrm-version="14"></blockquote></div>
-    <div><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJckaqUBr5Y/" data-instgrm-version="14"></blockquote></div>
-    <div><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJXErO7v4RX/" data-instgrm-version="14"></blockquote></div>
-  </div>
-
-  <p style="text-align: center; margin-top: 1.5rem;">
-    <a href="https://www.instagram.com/triplegemherbs/" target="_blank" style="color: var(--accent-color); font-weight: bold; text-decoration: none;">
-      → Follow me on Instagram
-    </a>
-  </p>
-</section>
-
-
+  <section id="instagram">
+    <h2>From Instagram</h2>
+    <!-- Instagram Embed -->
+    <p style="text-align: center;">
+      <a href="https://www.instagram.com/triplegemherbs/" target="_blank" style="color: var(--accent-color); font-weight: bold; text-decoration: none;">
+        → Follow @triplegemherbs for more
+      </a>
+    </p>
+  </section>
 
   <section id="contact">
     <h2>Contact</h2>
@@ -239,7 +228,5 @@
   <footer>
     <p>&copy; 2025 Triple Gem Herbs. All rights reserved.</p>
   </footer>
-
-  <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
