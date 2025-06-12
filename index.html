@@ -147,6 +147,18 @@
       font-family: var(--font-body);
     }
 
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .instagram-grid blockquote {
+      width: 100%;
+      max-width: 340px;
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;
@@ -212,10 +224,17 @@
 
   <section id="instagram">
     <h2>From Instagram</h2>
-    <!-- Instagram Embed -->
-    <p style="text-align: center;">
+    <div class="instagram-grid">
+      <div><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJ6v2VsRsTg/" data-instgrm-version="14"></blockquote></div>
+      <div><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJqE6LFRMtr/" data-instgrm-version="14"></blockquote></div>
+      <div><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJmzrVlhtMW/" data-instgrm-version="14"></blockquote></div>
+      <div><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJiQ2W1xum8/" data-instgrm-version="14"></blockquote></div>
+      <div><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJckaqUBr5Y/" data-instgrm-version="14"></blockquote></div>
+      <div><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJXErO7v4RX/" data-instgrm-version="14"></blockquote></div>
+    </div>
+    <p style="text-align: center; margin-top: 1.5rem;">
       <a href="https://www.instagram.com/triplegemherbs/" target="_blank" style="color: var(--accent-color); font-weight: bold; text-decoration: none;">
-        → Follow @triplegemherbs for more
+        → Follow me on Instagram
       </a>
     </p>
   </section>
@@ -228,5 +247,7 @@
   <footer>
     <p>&copy; 2025 Triple Gem Herbs. All rights reserved.</p>
   </footer>
+
+  <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
