@@ -4,23 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Triple Gem Herbs</title>
-  
+
   <!-- Meta SEO -->
-  <meta name="description" content="Triple Gem Herbs offers herbal consulting, botanical education, and grounded guidance rooted in both science and tradition.">
-  <meta name="keywords" content="herbalist, herbal consulting, plant medicine, ethnobotany, botanical education, natural healing, triple gem herbs, herbal tea guide, herbal workshops">
+  <meta name="description" content="Triple Gem Herbs offers herbal consulting, botanical education, and grounded guidance rooted in science and tradition.">
+  <meta name="keywords" content="herbalist, herbal consulting, herbal education, ethnobotany, plant medicine, triple gem herbs, herbal workshops, herbal tea guide">
   <meta name="author" content="Jasmine Zenderland">
 
-  <!-- Open Graph (for social sharing) -->
+  <!-- Open Graph (Social Preview) -->
   <meta property="og:title" content="Triple Gem Herbs">
-  <meta property="og:description" content="Herbal consulting and education rooted in tradition and science. Download your free herbal tea guide.">
-  <meta property="og:url" content="https://triplegemherbs.com">
+  <meta property="og:description" content="Herbal consulting and botanical education rooted in science and tradition.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/og-image.jpg"> <!-- Update this -->
+  <meta property="og:url" content="https://triplegemherbs.com">
+  <meta property="og:image" content="assets/og-image.jpg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Triple Gem Herbs">
-  <meta name="twitter:description" content="Herbal consulting and education rooted in tradition and science.">
+  <meta name="twitter:description" content="Herbal consulting and botanical education rooted in science and tradition.">
   <meta name="twitter:image" content="assets/og-image.jpg">
 
   <!-- JSON-LD Structured Data -->
@@ -33,15 +33,19 @@
     "url": "https://triplegemherbs.com",
     "description": "Herbal consulting, plant walks, and botanical education blending science and tradition.",
     "email": "triplegemherbs@gmail.com",
-    "areaServed": { "@type": "Place", "name": "United States" },
-    "founder": { "@type": "Person", "name": "Jasmine Zenderland" },
-    "sameAs": ["https://www.instagram.com/triplegemherbs"]
+    "founder": {
+      "@type": "Person",
+      "name": "Jasmine Zenderland"
+    },
+    "sameAs": [
+      "https://www.instagram.com/triplegemherbs"
+    ]
   }
   </script>
 
-  <!-- Fonts & Icons -->
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
 
   <!-- Styles -->
   <style>
@@ -60,6 +64,8 @@
       color: var(--forest-green);
       line-height: 1.6;
     }
+
+    /* HEADER */
     header {
       background-color: var(--peach);
       padding: 1.5rem 1rem;
@@ -73,11 +79,11 @@
       font-family: var(--font-header);
       font-size: 2.5rem;
       margin: 0;
-      color: var(--forest-green);
     }
     .tagline {
       font-style: italic;
       color: var(--teal);
+      margin-bottom: 1rem;
     }
     nav ul {
       display: flex;
@@ -85,14 +91,14 @@
       flex-wrap: wrap;
       gap: 1rem;
       list-style: none;
-      padding: 1rem 0;
+      padding: 0;
       margin: 0;
     }
     nav a {
       text-decoration: none;
       color: var(--forest-green);
       font-weight: bold;
-      padding: 0.5rem;
+      padding: 0.5rem 0.75rem;
       border-radius: 4px;
       transition: background 0.3s;
     }
@@ -100,6 +106,8 @@
       background-color: var(--teal);
       color: #fff;
     }
+
+    /* SECTIONS */
     section {
       padding: 2rem 1rem;
       max-width: 800px;
@@ -109,16 +117,33 @@
       border-bottom: 2px solid var(--peach);
       padding-bottom: 0.5rem;
       font-family: var(--font-header);
-      color: var(--forest-green);
       margin-top: 2rem;
+      color: var(--forest-green);
     }
+
+    /* ABOUT */
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .about-container img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--forest-green);
+      flex-shrink: 0;
+    }
+
+    /* CTA BOX */
     .cta-box {
       background-color: var(--peach);
       padding: 2rem;
       text-align: center;
       border-radius: 1rem;
       margin: 2rem auto;
-      max-width: 700px;
     }
     .cta-box a {
       display: inline-block;
@@ -129,24 +154,21 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 8px;
-      font-family: var(--font-body);
       transition: background 0.3s;
     }
     .cta-box a:hover {
       background-color: var(--teal);
     }
+
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 1rem;
       background-color: var(--peach);
       font-size: 0.9rem;
     }
-    .instagram-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 30px;
-      justify-items: center;
-    }
+
+    /* RESPONSIVE */
     @media (max-width: 600px) {
       header h1 { font-size: 2rem; }
       nav ul { flex-direction: column; }
@@ -154,6 +176,8 @@
   </style>
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
     <img src="assets/logo-fullcolor.png" alt="Triple Gem Herbs logo" />
     <h1>Triple Gem Herbs</h1>
@@ -163,22 +187,22 @@
         <li><a href="#about">About</a></li>
         <li><a href="#offerings">Offerings</a></li>
         <li><a href="#events">Events</a></li>
-        <li><a href="#instagram">Instagram</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="#instagram">Instagram</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- About -->
+  <!-- ABOUT -->
   <section id="about">
     <h2>About Jasmine</h2>
-    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem;">
-      <img src="assets/jasmine.jpg" alt="Jasmine Zenderland" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 3px solid var(--forest-green);" />
-      <p style="flex: 1; min-width: 240px;">Jasmine Zenderland is a botanist, educator, and herbalist who blends scientific rigor with traditional plant knowledge. Through Triple Gem Herbs, she offers herbal consulting, plant walks, and educational programs designed to support personal empowerment and a deeper connection to the natural world.</p>
+    <div class="about-container">
+      <img src="assets/jasmine.jpg" alt="Jasmine Zenderland" />
+      <p>Jasmine Zenderland is a botanist, educator, and herbalist blending scientific rigor with traditional plant knowledge. Through Triple Gem Herbs, she offers herbal consulting, seasonal plant walks, and educational programs designed to support personal empowerment and a deeper connection to the natural world.</p>
     </div>
   </section>
 
-  <!-- Offerings -->
+  <!-- OFFERINGS -->
   <section id="offerings">
     <h2>Offerings</h2>
     <ul>
@@ -189,45 +213,39 @@
     </ul>
   </section>
 
-  <!-- Free Guide -->
+  <!-- FREE GUIDE -->
   <section id="free-guide" class="cta-box">
     <h2>Get Your Free Herbal Tea Guide</h2>
     <p>Discover time-tested brewing techniques, seasonal energetics, and simple add-ins—grounded in tradition and backed by plant science.</p>
     <a href="https://account.beacons.ai/account/home/store?b=8967df73-bbf2-4e3b-a594-093a6885a475" target="_blank">Download the Free Guide</a>
   </section>
 
-  <!-- Events -->
+  <!-- EVENTS -->
   <section id="events">
     <h2>Upcoming Events</h2>
     <p>No upcoming events right now, but more are brewing! 🍃</p>
-    <p>Join my email list to get updates on herbal markets, plant walks, and new offerings:</p>
-    <a href="https://beacons.ai/triplegemherbs" target="_blank" style="background: var(--forest-green); color: #fff; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">
-      Join the List
-    </a>
+    <p>Join my email list for updates on herbal markets, plant walks, and new offerings:</p>
+    <a href="https://beacons.ai/triplegemherbs" target="_blank" style="background: var(--forest-green); color: #fff; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">Join the List</a>
   </section>
 
-  <!-- Instagram -->
-  <section id="instagram">
-    <h2>From Instagram</h2>
-    <div class="instagram-grid">
-      <!-- Your Instagram embeds remain -->
-    </div>
-    <p style="text-align: center; margin-top: 1.5rem;">
-      <a href="https://www.instagram.com/triplegemherbs/" target="_blank" style="color: var(--teal); font-weight: bold;">→ Follow me on Instagram</a>
-    </p>
-  </section>
-
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact</h2>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf7jqid133_2frnXXX8dXt4ohwAALdVuHgyn7K1QARzbEYwbA/viewform?embedded=true" width="100%" height="900px" frameborder="0">Loading…</iframe>
   </section>
 
-  <!-- Footer -->
+  <!-- INSTAGRAM -->
+  <section id="instagram">
+    <h2>From Instagram</h2>
+    <p style="text-align: center;">
+      <a href="https://www.instagram.com/triplegemherbs/" target="_blank" style="color: var(--teal); font-weight: bold;">→ Follow me on Instagram</a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Triple Gem Herbs. All rights reserved.</p>
   </footer>
 
-  <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
