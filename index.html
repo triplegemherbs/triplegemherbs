@@ -182,6 +182,55 @@
       background-color: var(--teal);
     }
 
+    /* PUBLICATIONS */
+    #publications {
+      background-color: #fdfaf7;
+      padding: 2.5rem 1rem;
+      border-top: 2px solid var(--peach);
+      border-bottom: 2px solid var(--peach);
+      max-width: 900px;
+      margin: 3rem auto;
+      border-radius: 12px;
+    }
+    #publications h2 {
+      font-family: var(--font-header);
+      color: var(--forest-green);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .pub-list {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .pub-item {
+      background: #fff;
+      border: 1px solid var(--peach);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .pub-item h3 {
+      margin-top: 0;
+      color: var(--forest-green);
+    }
+    .pub-item p {
+      margin: 0.5rem 0;
+    }
+    .pub-link {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.5rem 1rem;
+      background-color: var(--forest-green);
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .pub-link:hover {
+      background-color: var(--teal);
+    }
+
     /* FOOTER */
     footer {
       text-align: center;
@@ -212,6 +261,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#offerings">Offerings</a></li>
         <li><a href="#events">Events</a></li>
+        <li><a href="#publications">Publications</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#instagram">Instagram</a></li>
       </ul>
@@ -253,6 +303,35 @@
     <p>No upcoming events right now, but more are brewing! 🍃</p>
     <p>Join my email list for updates on herbal markets, plant walks, and new offerings:</p>
     <a href="https://beacons.ai/triplegemherbs" target="_blank" style="background: var(--forest-green); color: #fff; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">Join the List</a>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>Publications & Features</h2>
+    <p>Jasmine Zenderland’s work as a botanist and herbalist has been featured in scientific journals, educational platforms, and policy briefs.</p>
+    
+    <div class="pub-list">
+      <article class="pub-item">
+        <h3>Food as Medicine: Lion’s Mane (<em>Hericium erinaceus</em>)</h3>
+        <p><em>HerbalEGram</em>, American Botanical Council — September 2024</p>
+        <p>Co-authored feature exploring traditional uses, modern research, and culinary applications of lion’s mane mushroom.</p>
+        <a href="https://www.herbalgram.org/resources/herbalegram/volumes/volume-21/issue-9-september/news-and-features-3-1/fam-lions-mane/" target="_blank" class="pub-link">Read Article →</a>
+      </article>
+      
+      <article class="pub-item">
+        <h3>The Use of “Use Value”: Quantifying Importance in Ethnobotany</h3>
+        <p><em>Economic Botany</em> (Springer) — October 2019</p>
+        <p>Peer-reviewed study examining how “use value” varies between cultivated and wild plants across ethnobotanical datasets.</p>
+        <a href="https://link.springer.com/article/10.1007/s12231-019-09480-1" target="_blank" class="pub-link">Read Article →</a>
+      </article>
+      
+      <article class="pub-item">
+        <h3>Herbal Supplements and Consumer Safety</h3>
+        <p>MOST Policy Initiative / AAAS — August 2023</p>
+        <p>Community science note on the regulation, safety challenges, and consumer considerations of herbal supplements in Missouri.</p>
+        <a href="https://mostpolicyinitiative.org/wp-content/uploads/2023/12/Most-Note-Herbal-Supplements-9_25_23.pdf" target="_blank" class="pub-link">Read Brief →</a>
+      </article>
+    </div>
   </section>
 
   <!-- CONTACT -->
