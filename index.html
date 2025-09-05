@@ -68,22 +68,24 @@
     /* HEADER */
     header {
       background-color: var(--peach);
-      padding: 1.5rem 1rem;
+      padding: 2rem 1rem 1.5rem 1rem;
       text-align: center;
     }
-    header img {
-      max-width: 140px;
-      margin-bottom: 0.5rem;
+    .site-logo {
+      max-width: 180px;
+      border-radius: 12px;
+      border: 3px solid var(--forest-green);
+      margin-bottom: 0.75rem;
     }
     header h1 {
       font-family: var(--font-header);
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin: 0;
     }
     .tagline {
       font-style: italic;
       color: var(--teal);
-      margin-bottom: 1rem;
+      margin: 0.5rem 0 1.5rem;
     }
     nav ul {
       display: flex;
@@ -110,7 +112,7 @@
     /* SECTIONS */
     section {
       padding: 2rem 1rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
     h2 {
@@ -126,15 +128,35 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 1.5rem;
+      gap: 2rem;
+      margin-top: 1.5rem;
     }
-    .about-container img {
-      width: 160px;
-      height: 160px;
+    .about-photo {
+      width: 260px;
+      height: 260px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid var(--forest-green);
       flex-shrink: 0;
+    }
+    .about-text {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    /* OFFERINGS */
+    .offerings-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .offerings-list li {
+      background: #fdfaf7;
+      border: 2px solid var(--peach);
+      border-radius: 12px;
+      padding: 1rem;
+      list-style: none;
     }
 
     /* CTA BOX */
@@ -166,12 +188,15 @@
       padding: 1rem;
       background-color: var(--peach);
       font-size: 0.9rem;
+      margin-top: 2rem;
     }
 
     /* RESPONSIVE */
-    @media (max-width: 600px) {
-      header h1 { font-size: 2rem; }
+    @media (max-width: 700px) {
+      header h1 { font-size: 2.2rem; }
       nav ul { flex-direction: column; }
+      .about-container { flex-direction: column; text-align: center; }
+      .about-photo { margin-bottom: 1rem; }
     }
   </style>
 </head>
@@ -179,7 +204,7 @@
 
   <!-- HEADER -->
   <header>
-    <img src="logo.jpeg" alt="Triple Gem Herbs logo" />
+    <img src="logo.jpeg" alt="Triple Gem Herbs logo" class="site-logo" />
     <h1>Triple Gem Herbs</h1>
     <p class="tagline">Science meets tradition in herbalism & botanical education</p>
     <nav>
@@ -197,16 +222,17 @@
   <section id="about">
     <h2>About Jasmine</h2>
     <div class="about-container">
-      <img src="jasmine.jpg" alt="Jasmine Zenderland" />
-      <img src="jasmine2.jpeg" alt="Jasmine Zenderland alternate photo" />
-      <p>Jasmine Zenderland is a botanist, educator, and herbalist blending scientific rigor with traditional plant knowledge. Through Triple Gem Herbs, she offers herbal consulting, seasonal plant walks, and educational programs designed to support personal empowerment and a deeper connection to the natural world.</p>
+      <img src="jasmine.jpg" alt="Jasmine Zenderland" class="about-photo" />
+      <div class="about-text">
+        <p>Jasmine Zenderland is a botanist, educator, and herbalist blending scientific rigor with traditional plant knowledge. Through Triple Gem Herbs, she offers herbal consulting, seasonal plant walks, and educational programs designed to support personal empowerment and a deeper connection to the natural world.</p>
+      </div>
     </div>
   </section>
 
   <!-- OFFERINGS -->
   <section id="offerings">
     <h2>Offerings</h2>
-    <ul>
+    <ul class="offerings-list">
       <li><strong>Consultations:</strong> Personalized herbal guidance</li>
       <li><strong>Workshops:</strong> Online & in-person learning</li>
       <li><strong>Plant Walks:</strong> Seasonal ID & foraging</li>
