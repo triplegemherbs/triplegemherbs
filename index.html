@@ -260,22 +260,31 @@
     </div>
   </footer>
 
-  <script>
-    // dynamic mailto to reduce spam
-    (function(){
-      const user = 'triplegemherbs';
-      const domain = 'gmail.com';
-      const subject = encodeURIComponent('Consultation Request from Website');
-      const body = encodeURIComponent(
-        'Hi Jasmine,%0A%0AI would love to book a consultation. Here are a few details:%0A- Name:%0A- Preferred times:%0A- Focus areas (gut, nervous system, etc.):%0A- How you found me:%0A%0AThank you!'
-      );
-      const btn = document.getElementById('bookConsultBtn');
-      btn.setAttribute('href', `mailto:${user}@${domain}?subject=${subject}&body=${body}`);
-    })();
+<script>
+  (function () {
+    const user = 'triplegemherbs';
+    const domain = 'gmail.com';
+    const subject = encodeURIComponent('Consultation Request from Website');
 
-    // auto-update footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    const rawBody =
+`Hi Jasmine,
+
+I'd love to book a consultation. Here are a few details:
+- Name:
+- Preferred times:
+- Focus areas (gut, nervous system, etc.):
+- How you found me:
+
+Thank you!`;
+
+    // Encode and normalize newlines for widest mail client compatibility
+    const body = encodeURIComponent(rawBody).replace(/%0A/g, '%0D%0A');
+
+    const btn = document.getElementById('bookConsultBtn');
+    btn.setAttribute('href', \`mailto:\${user}@\${domain}?subject=\${subject}&body=\${body}\`);
+  })();
+</script>
+
 
 </body>
 </html>
