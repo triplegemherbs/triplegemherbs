@@ -48,6 +48,7 @@
       --peach: #F5C8A7;
       --teal: #2A9D8F;
       --yellow: #F4B400;
+      --cream: #F9F6F3;
       --font-header: 'Special Elite', serif;
       --font-body: 'Lora', serif;
     }
@@ -57,12 +58,14 @@
       font-family: var(--font-body);
       color: var(--forest-green);
       line-height: 1.6;
+      background: #fff;
     }
     img { max-width: 100%; height: auto; }
 
+    /* HEADER */
     header {
       background-color: var(--peach);
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 1.5rem;
       text-align: center;
     }
     .site-logo {
@@ -87,8 +90,8 @@
       flex-wrap: wrap;
       gap: 1rem;
       list-style: none;
-      margin: 0;
       padding: 0;
+      margin: 0;
     }
     nav a {
       text-decoration: none;
@@ -102,7 +105,7 @@
 
     /* HERO */
     .hero-section {
-      background-color: #f9f6f3;
+      background-color: var(--cream);
       text-align: center;
       padding: 4.5rem 1rem 3.5rem;
       border-bottom: 2px solid var(--peach);
@@ -111,11 +114,10 @@
       font-family: var(--font-header);
       color: var(--forest-green);
       font-size: 2.4rem;
-      margin-bottom: 0.75rem;
+      margin: 0 0 0.75rem;
     }
     .hero-subtitle {
-      font-family: var(--font-body);
-      color: #334;
+      color: #333344;
       font-size: 1.15rem;
       max-width: 760px;
       margin: 0 auto 1.75rem;
@@ -135,25 +137,124 @@
       transition: transform 0.06s, opacity 0.2s, background 0.2s, color 0.2s;
     }
     .btn-primary { background-color: var(--forest-green); color: #fff; }
-    .btn-primary:hover { opacity: 0.9; }
+    .btn-primary:hover { opacity: 0.92; }
     .btn-secondary {
       background-color: var(--peach);
       color: var(--forest-green);
       border: 2px solid var(--forest-green);
     }
-    .btn-secondary:hover {
-      background-color: var(--teal);
-      color: #fff;
-      border-color: var(--teal);
-    }
+    .btn-secondary:hover { background-color: var(--teal); color: #fff; border-color: var(--teal); }
 
+    /* SECTIONS */
     section { padding: 2rem 1rem; max-width: 900px; margin: auto; }
     h2 {
       border-bottom: 2px solid var(--peach);
       padding-bottom: 0.5rem;
       font-family: var(--font-header);
+      margin-top: 2rem;
       color: var(--forest-green);
     }
+
+    /* ABOUT */
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .about-photo {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--forest-green);
+      flex-shrink: 0;
+    }
+    .about-text { flex: 1; min-width: 260px; }
+
+    /* OFFERINGS */
+    .offerings-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      padding-left: 0;
+    }
+    .offerings-list li {
+      background: #fdfaf7;
+      border: 2px solid var(--peach);
+      border-radius: 12px;
+      padding: 1rem;
+      list-style: none;
+    }
+
+    /* CTA BOX */
+    .cta-box {
+      background-color: var(--peach);
+      padding: 2rem;
+      text-align: center;
+      border-radius: 1rem;
+      margin: 2rem auto;
+    }
+    .cta-box a {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--forest-green);
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .cta-box a:hover { background-color: var(--teal); }
+
+    /* PUBLICATIONS */
+    #publications {
+      background-color: #fdfaf7;
+      padding: 2.5rem 1rem;
+      border-top: 2px solid var(--peach);
+      border-bottom: 2px solid var(--peach);
+      max-width: 900px;
+      margin: 3rem auto;
+      border-radius: 12px;
+    }
+    #publications h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .pub-list { display: grid; gap: 1.5rem; padding-left: 0; }
+    .pub-item {
+      background: #fff;
+      border: 1px solid var(--peach);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .pub-item h3 { margin-top: 0; color: var(--forest-green); }
+    .pub-link {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.5rem 1rem;
+      background-color: var(--forest-green);
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .pub-link:hover { background-color: var(--teal); }
+
+    /* CONTACT */
+    .contact-card {
+      background: #fdfaf7;
+      border: 2px solid var(--peach);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .contact-card p { margin: 0.3rem 0; }
 
     /* FOOTER */
     .site-footer {
@@ -171,31 +272,35 @@
       gap: 1rem;
     }
     .footer-col { flex: 1 1 260px; min-width: 240px; }
-    .footer-col h4, .footer-col h3 {
-      font-family: var(--font-header);
-      color: #fff;
-      margin-top: 0;
-    }
+    .footer-col h4, .footer-col h3 { font-family: var(--font-header); color: #fff; margin-top: 0; }
     .footer-links { list-style: none; padding: 0; margin: 0.5rem 0 0; }
     .footer-links li { margin: 0.3rem 0; }
     .footer-links a { color: #f9f6f3; text-decoration: none; }
     .footer-links a:hover { text-decoration: underline; }
     .footer-bottom {
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       opacity: 0.9;
       border-top: 1px solid rgba(255,255,255,0.2);
       padding-top: 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
-    @media (max-width:700px){
-      header h1{font-size:2.2rem;}
-      nav ul{flex-direction:column;}
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      header h1 { font-size: 2.2rem; }
+      nav ul { flex-direction: column; }
+      .about-container { flex-direction: column; text-align: center; }
+      .about-photo { margin-bottom: 1rem; }
+      .hero-title { font-size: 2rem; }
+      .hero-subtitle { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <img src="logo.jpeg" alt="Triple Gem Herbs logo" class="site-logo" />
     <h1>Triple Gem Herbs</h1>
@@ -205,8 +310,10 @@
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#offerings">Offerings</a></li>
+        <li><a href="#events">Events</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="#instagram">Instagram</a></li>
       </ul>
     </nav>
   </header>
@@ -219,7 +326,8 @@
       with nature’s healing intelligence and your body’s innate balance.
     </p>
     <div class="hero-cta">
-      <a id="bookConsultBtn" class="btn btn-primary" href="#">Book a Consultation</a>
+      <!-- Fallback goes to contact; JS upgrades to mailto -->
+      <a id="bookConsultBtn" class="btn btn-primary" href="#contact">Book a Consultation</a>
       <a href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener" class="btn btn-secondary">Download the Free Herbal Tea Guide</a>
     </div>
   </section>
@@ -227,46 +335,139 @@
   <!-- ABOUT -->
   <section id="about">
     <h2>About Jasmine</h2>
-    <p>Jasmine Zenderland is a botanist, educator, and herbalist blending scientific rigor with traditional plant knowledge. Through Triple Gem Herbs, she offers herbal consulting, seasonal plant walks, and educational programs designed to support empowerment and a deeper connection to nature.</p>
+    <div class="about-container">
+      <img src="jasmine.jpg" alt="Portrait of Jasmine Zenderland, botanist and herbalist" class="about-photo" />
+      <div class="about-text">
+        <p>Jasmine Zenderland is a botanist, educator, and herbalist blending scientific rigor with traditional plant knowledge. Through Triple Gem Herbs, she offers herbal consulting, seasonal plant walks, and educational programs designed to support personal empowerment and a deeper connection to the natural world.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFERINGS -->
+  <section id="offerings">
+    <h2>Offerings</h2>
+    <ul class="offerings-list">
+      <li><strong>Consultations:</strong> Personalized herbal guidance</li>
+      <li><strong>Workshops:</strong> Online &amp; in-person learning</li>
+      <li><strong>Plant Walks:</strong> Seasonal ID &amp; foraging</li>
+      <li><strong>Custom Experiences:</strong> Private herbal events &amp; classes</li>
+    </ul>
+  </section>
+
+  <!-- FREE GUIDE -->
+  <section id="free-guide" class="cta-box" aria-labelledby="free-guide-title">
+    <h2 id="free-guide-title">Get Your Free Herbal Tea Guide</h2>
+    <p>Discover time-tested brewing techniques, seasonal energetics, and simple add-ins—grounded in tradition and backed by plant science.</p>
+    <a href="https://account.beacons.ai/account/home/store?b=8967df73-bbf2-4e3b-a594-093a6885a475" target="_blank" rel="noopener">Download the Free Guide</a>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events">
+    <h2>Upcoming Events</h2>
+    <p>No upcoming events right now, but more are brewing! 🍃</p>
+    <p>Join my email list for updates on herbal markets, plant walks, and new offerings:</p>
+    <a href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener" class="btn btn-primary">Join the List</a>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>Publications &amp; Features</h2>
+    <p>Jasmine Zenderland’s work as a botanist and herbalist has been featured in scientific journals, educational platforms, and policy briefs.</p>
+    <div class="pub-list">
+      <article class="pub-item">
+        <h3>Food as Medicine: Lion’s Mane (<em>Hericium erinaceus</em>)</h3>
+        <p><em>HerbalEGram</em>, American Botanical Council — September 2024</p>
+        <p>Co-authored feature exploring traditional uses, modern research, and culinary applications of lion’s mane mushroom.</p>
+        <a href="https://www.herbalgram.org/resources/herbalegram/volumes/volume-21/issue-9-september/news-and-features-3-1/fam-lions-mane/" target="_blank" rel="noopener" class="pub-link">Read Article →</a>
+      </article>
+      <article class="pub-item">
+        <h3>The Use of “Use Value”: Quantifying Importance in Ethnobotany</h3>
+        <p><em>Economic Botany</em> (Springer) — October 2019</p>
+        <p>Peer-reviewed study examining how “use value” varies between cultivated and wild plants across ethnobotanical datasets.</p>
+        <a href="https://link.springer.com/article/10.1007/s12231-019-09480-1" target="_blank" rel="noopener" class="pub-link">Read Article →</a>
+      </article>
+      <article class="pub-item">
+        <h3>Herbal Supplements and Consumer Safety</h3>
+        <p>MOST Policy Initiative / AAAS — August 2023</p>
+        <p>Community science note on the regulation, safety challenges, and consumer considerations of herbal supplements in Missouri.</p>
+        <a href="https://mostpolicyinitiative.org/wp-content/uploads/2023/12/Most-Note-Herbal-Supplements-9_25_23.pdf" target="_blank" rel="noopener" class="pub-link">Read Brief →</a>
+      </article>
+    </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:triplegemherbs@gmail.com">triplegemherbs@gmail.com</a></p>
-    <p><strong>Instagram:</strong> <a href="https://instagram.com/triplegemherbs" target="_blank">@triplegemherbs</a></p>
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact</h2>
+
+    <div class="contact-card" role="region" aria-label="Direct contact information">
+      <p><strong>Email:</strong> <a href="mailto:triplegemherbs@gmail.com">triplegemherbs@gmail.com</a></p>
+      <p><strong>Instagram:</strong> <a href="https://www.instagram.com/triplegemherbs" target="_blank" rel="noopener">@triplegemherbs</a></p>
+      <p><strong>Location:</strong> Northern California • Serving clients everywhere</p>
+    </div>
+
+    <iframe
+      title="Contact form"
+      src="https://docs.google.com/forms/d/e/1FAIpQLSf7jqid133_2frnXXX8dXt4ohwAALdVuHgyn7K1QARzbEYwbA/viewform?embedded=true"
+      width="100%"
+      height="900"
+      frameborder="0">
+      Loading…
+    </iframe>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section id="instagram" aria-labelledby="instagram-title">
+    <h2 id="instagram-title">From Instagram</h2>
+    <p style="text-align: center;">
+      <a href="https://www.instagram.com/triplegemherbs/" target="_blank" rel="noopener" style="color: var(--teal); font-weight: bold;">→ Follow me on Instagram</a>
+    </p>
   </section>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="footer-container">
       <div class="footer-col">
         <h3>Triple Gem Herbs</h3>
-        <p>Herbal consulting & education blending science and tradition.<br>Based in Northern California • Serving clients everywhere.</p>
+        <p>Herbal consulting &amp; education blending science and tradition.<br>Based in Northern California • Serving clients everywhere.</p>
       </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:triplegemherbs@gmail.com">triplegemherbs@gmail.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/triplegemherbs" target="_blank" rel="noopener">@triplegemherbs</a></p>
+      </div>
+
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul class="footer-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#contact">Consultations</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="https://beacons.ai/triplegemherbs" target="_blank">Shop / Free Guide</a></li>
+          <li><a href="/consultations">Consultations</a></li>
+          <li><a href="/workshops">Workshops</a></li>
+          <li><a href="/shop">Shop</a></li>
+          <li><a href="/blog">Blog</a></li>
         </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>© <span id="year"></span> Triple Gem Herbs • All Rights Reserved<br>
-      Herbal information shared here is for educational purposes only and not a substitute for medical advice.</p>
+      <p>
+        © <span id="year"></span> Triple Gem Herbs • All Rights Reserved<br>
+        Herbal information shared here is for educational purposes only and not a substitute for medical advice.
+      </p>
     </div>
   </footer>
 
-<script>
-  (function () {
-    const user = 'triplegemherbs';
-    const domain = 'gmail.com';
-    const subject = encodeURIComponent('Consultation Request from Website');
+  <script>
+    // Upgrade the "Book a Consultation" button to a prefilled email (spam-safe)
+    (function () {
+      const btn = document.getElementById('bookConsultBtn');
+      if (!btn) return;
 
-    const rawBody =
+      const user = 'triplegemherbs';
+      const domain = 'gmail.com';
+      const subject = encodeURIComponent('Consultation Request from Website');
+
+      const rawBody =
 `Hi Jasmine,
 
 I'd love to book a consultation. Here are a few details:
@@ -277,14 +478,16 @@ I'd love to book a consultation. Here are a few details:
 
 Thank you!`;
 
-    // Encode and normalize newlines for widest mail client compatibility
-    const body = encodeURIComponent(rawBody).replace(/%0A/g, '%0D%0A');
+      // Encode and normalize newlines for maximum client compatibility
+      const body = encodeURIComponent(rawBody).replace(/%0A/g, '%0D%0A');
 
-    const btn = document.getElementById('bookConsultBtn');
-    btn.setAttribute('href', \`mailto:\${user}@\${domain}?subject=\${subject}&body=\${body}\`);
-  })();
-</script>
+      // Replace fallback link with mailto
+      btn.setAttribute('href', \`mailto:\${user}@\${domain}?subject=\${subject}&body=\${body}\`);
+    })();
 
+    // Auto-update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
