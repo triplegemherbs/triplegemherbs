@@ -424,26 +424,34 @@
   </section>
 
   <!-- FOOTER -->
+   <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-container">
       <div class="footer-col">
         <h3>Triple Gem Herbs</h3>
-        <p>Herbal consulting &amp; education blending science and tradition.<br>Based in Northern California • Serving clients everywhere.</p>
+        <p>Herbal consulting &amp; botanical education blending science and tradition.<br>
+        Based in Northern California • Serving clients everywhere.</p>
+        <p style="margin-top: 1rem;">
+          <a href="https://docs.google.com/forms/d/1UhKmOaqvNwwjVRRiG7MkDSUS_0y9WQNANj5GiErSfb8/viewform" target="_blank" rel="noopener" class="btn btn-secondary">Book a Consultation</a>
+        </p>
       </div>
 
       <div class="footer-col">
-        <h4>Contact</h4>
-        <p>Connect on Instagram: <a href="https://instagram.com/triplegemherbs" target="_blank" rel="noopener">@triplegemherbs</a></p>
+        <h4>Connect</h4>
+        <p>Follow and reach out on Instagram:<br>
+          <a href="https://instagram.com/triplegemherbs" target="_blank" rel="noopener">@triplegemherbs</a>
+        </p>
+        <p>Prefer to write? Use the <a href="#contact" style="color:#F5C8A7;">contact form</a>.</p>
       </div>
 
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul class="footer-links">
           <li><a href="#about">About</a></li>
-          <li><a href="/consultations">Consultations</a></li>
-          <li><a href="/workshops">Workshops</a></li>
-          <li><a href="/shop">Shop</a></li>
-          <li><a href="/blog">Blog</a></li>
+          <li><a href="#offerings">Offerings</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Free Tea Guide</a></li>
         </ul>
       </div>
     </div>
@@ -451,25 +459,26 @@
     <div class="footer-bottom">
       <p>
         © <span id="year"></span> Triple Gem Herbs • All Rights Reserved<br>
-        Herbal information shared here is for educational purposes only and not a substitute for medical advice.
+        Herbal information shared is for educational purposes only and not a substitute for medical advice.
       </p>
     </div>
   </footer>
 
-<script>
-  // Make "Book a Consultation" button scroll to contact form
-  (function () {
-    const btn = document.getElementById('bookConsultBtn');
-    if (!btn) return;
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
-    });
-  })();
+  <script>
+    // Smooth scroll for “Book a Consultation” button
+    (function () {
+      const btn = document.getElementById('bookConsultBtn');
+      if (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+    })();
 
-  // Auto-update footer year
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    // Auto-update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 
 </body>
