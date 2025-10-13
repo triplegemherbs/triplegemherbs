@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Newsletter Archive • Triple Gem Herbs</title>
+  <meta name="description" content="Seasonal newsletter archive from Triple Gem Herbs — where science and tradition meet. Read past issues and subscribe for the next one." />
+
+  <!-- Brand Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Newsletter Archive • Triple Gem Herbs" />
+  <meta property="og:description" content="Read past issues and subscribe to the Triple Gem Herbs seasonal newsletter." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-cover.jpg" />
+
+  <style>
+    :root {
+      /* Brand colors */
+      --forest: #1e4d3a;   /* forest green */
+      --peach:  #f7d2b8;   /* peach tone */
+      --ink:    #1b1b1b;   /* body text */
+      --stone:  #f6f5f3;   /* light bg */
+    }
+    html, body { margin: 0; padding: 0; font-family: "Lora", serif; color: var(--ink); background: var(--stone); }
+    a { color: var(--forest); text-decoration: underline; text-underline-offset: 2px; }
+
+    /* Layout */
+    .container { width: min(1100px, 92vw); margin: 0 auto; }
+
+    /* Header */
+    header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.85); backdrop-filter: blur(8px); border-bottom: 1px solid #e7e4df; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+    .brand-mark { width: 40px; height: 40px; border-radius: 12px; background: var(--forest); display: grid; place-items: center; color: white; font-family: "Special Elite", serif; font-size: 18px; letter-spacing: 0.5px; }
+    .brand h1 { font-family: "Special Elite", serif; font-size: 18px; margin: 0; letter-spacing: 0.5px; }
+    .nav-links { display: flex; gap: 16px; }
+    .btn { display: inline-block; padding: 10px 14px; border-radius: 14px; border: 1px solid var(--forest); color: var(--forest); text-decoration: none; font-weight: 600; }
+    .btn.fill { background: var(--forest); color: white; border-color: var(--forest); }
+
+    /* Hero */
+    .hero { padding: 56px 0 18px; text-align: left; }
+    .eyebrow { display: inline-block; background: var(--peach); color: #532b12; font-weight: 700; padding: 6px 10px; border-radius: 999px; letter-spacing: 0.3px; }
+    .hero h2 { font-family: "Special Elite", serif; font-size: clamp(28px, 5vw, 44px); line-height: 1.1; margin: 14px 0 10px; }
+    .hero p { font-size: clamp(16px, 2.5vw, 18px); margin: 0; max-width: 68ch; }
+
+    /* Archive grid */
+    .archive { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; padding: 24px 0 70px; }
+    .card { grid-column: span 12; background: #fff; border: 1px solid #ece8e2; border-radius: 18px; overflow: hidden; display: grid; grid-template-columns: 180px 1fr; min-height: 160px; }
+    .thumb { background: #eee; }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .meta { padding: 16px 18px; display: grid; gap: 6px; align-content: center; }
+    .meta time { font-size: 13px; color: #666; letter-spacing: 0.3px; text-transform: uppercase; }
+    .meta h3 { margin: 4px 0 4px; font-size: 20px; line-height: 1.25; }
+    .meta p { margin: 0; color: #444; }
+    .meta .chips { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { font-size: 12px; background: #f3f0ec; color: #5a4d42; border-radius: 999px; padding: 4px 10px; border: 1px solid #e8e2da; }
+    .actions { margin-top: 12px; display: flex; gap: 10px; }
+
+    /* Subscribe panel */
+    .subscribe { background: linear-gradient(135deg, var(--peach), #ffe9db); border: 1px solid #f7dcca; border-radius: 20px; padding: 20px; display: grid; gap: 10px; }
+    .subscribe h4 { margin: 0; font-size: 20px; }
+    .subscribe p { margin: 0; }
+
+    /* Footer */
+    footer { border-top: 1px solid #e7e4df; padding: 30px 0 50px; font-size: 14px; color: #4a4a4a; }
+
+    /* Responsive */
+    @media (max-width: 820px) {
+      .card { grid-template-columns: 1fr; }
+      .thumb { height: 160px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Back to home">
+        <div class="brand-mark">TGH</div>
+        <h1>Triple Gem Herbs</h1>
+      </a>
+      <nav class="nav-links" aria-label="Site">
+        <a class="btn" href="index.html#offerings">Offerings</a>
+        <a class="btn" href="index.html#contact">Contact</a>
+        <a class="btn fill" href="#subscribe">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="archive-heading">
+      <span class="eyebrow">Seasonal Archive</span>
+      <h2 id="archive-heading">Newsletter — where science & tradition meet</h2>
+      <p>Browse past issues, then join the list to get the next one in your inbox. I share a featured herb, an easy recipe, and notes from the field each season.</p>
+    </section>
+
+    <!-- Subscribe CTA (MailerLite or Beacons) -->
+    <section id="subscribe" class="subscribe" aria-labelledby="subscribe-heading">
+      <h4 id="subscribe-heading">Subscribe for future issues</h4>
+      <p>Join the list for the next seasonal letter. No spam — unsubscribe anytime.</p>
+      <!-- Replace the link below with your real signup URL -->
+      <p>
+        <a class="btn fill" href="REPLACE_WITH_YOUR_SIGNUP_URL" target="_blank" rel="noopener">Sign up</a>
+        <a class="btn" href="mailto:hello@triplegemherbs.com?subject=Newsletter%20Signup">Prefer email?</a>
+      </p>
+    </section>
+
+    <!-- Archive list -->
+    <section class="archive" aria-label="Past issues">
+
+      <!-- EXAMPLE CARD (Autumn 2025). Duplicate for future issues. -->
+      <article class="card">
+        <div class="thumb" aria-hidden="true">
+          <!-- Replace with your real image path -->
+          <img src="assets/newsletters/autumn-2025-hero.jpg" alt="Steam rising from a pot of dandelion coffee and a sprig of Usnea on a cutting board." />
+        </div>
+        <div class="meta">
+          <time datetime="2025-10-12">Autumn 2025</time>
+          <h3><a href="newsletters/autumn-2025.html">Usnea, cozy dandelion “coffee,” and fall field notes</a></h3>
+          <p>Featured herb: <em>Usnea</em> • Simple recipe: roasted-dandelion root “coffee” • Notes from the Emerald Triangle.</p>
+          <div class="chips" aria-label="Tags">
+            <span class="chip">Lichens</span>
+            <span class="chip">Seasonal</span>
+            <span class="chip">Recipes</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="newsletters/autumn-2025.html">Read issue</a>
+            <a class="btn" href="#subscribe">Subscribe</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Add more <article class="card"> blocks here for Winter/Spring/Summer, etc. -->
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Triple Gem Herbs</strong> — herbal consulting & botanical education. Humboldt County, CA.</p>
+      <p>
+        <a href="https://instagram.com/triplegemherbs" target="_blank" rel="noopener">Instagram</a> ·
+        <a href="REPLACE_WITH_YOUR_BEACONS" target="_blank" rel="noopener">Beacons</a> ·
+        <a href="index.html#contact">Contact</a>
+      </p>
+      <p style="opacity:.8">© <span id="year"></span> Triple Gem Herbs. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!--
+  ──────────────────────────────────────────────────────────────
+  HOW TO USE THIS PAGE
+  1) Save this file as newsletter.html in your repo root.
+  2) In index.html, add a nav link to "/newsletter.html".
+  3) For each issue, create a file in /newsletters/ (e.g., newsletters/autumn-2025.html)
+     and add a matching image in /assets/newsletters/.
+  4) Duplicate the <article class="card"> block for each additional issue.
+  5) Replace REPLACE_WITH_YOUR_SIGNUP_URL with your real Beacons or MailerLite URL.
+
+  BONUS: A minimal single-issue template you can copy to newsletters/autumn-2025.html ↓
+  ──────────────────────────────────────────────────────────────
+  -->
+
+  <!--
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Autumn 2025 • Triple Gem Herbs Newsletter</title>
+    <meta name="description" content="Usnea, roasted dandelion root ‘coffee,’ and field notes from the Emerald Triangle." />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body { margin:0; font-family: Lora, serif; color:#1b1b1b; background:#f6f5f3; }
+      main { width:min(800px,92vw); margin: 40px auto; background:#fff; border:1px solid #ece8e2; border-radius:18px; padding:28px; }
+      h1 { font-family: "Special Elite", serif; margin: 0 0 6px; }
+      time { font-size:13px; color:#666; text-transform:uppercase; letter-spacing:.3px; }
+      .hero { border-radius:16px; overflow:hidden; border:1px solid #eee; margin: 16px 0 22px; }
+      img { width:100%; height:auto; display:block; }
+      .subscribe { background: #f7d2b8; padding: 14px; border-radius: 12px; border:1px solid #f7dcca; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a href="../newsletter.html" style="text-decoration:none;color:#1e4d3a;">← Back to archive</a>
+      <h1>Usnea, cozy dandelion “coffee,” and fall field notes</h1>
+      <time datetime="2025-10-12">Autumn 2025</time>
+      <div class="hero"><img src="../assets/newsletters/autumn-2025-hero.jpg" alt="Dandelion coffee brewing and Usnea lichen." /></div>
+
+      <h2>Featured Herb: <em>Usnea</em> (Usnea spp.)</h2>
+      <p>Short lead paragraph… (paste your content here). If quoting sources, add a references section at the end.</p>
+
+      <h2>Recipe: Roasted dandelion root “coffee”</h2>
+      <p>Short method + ingredients…</p>
+
+      <h2>Notes from the field</h2>
+      <p>Two–three short paragraphs with a field photo if desired.</p>
+
+      <div class="subscribe">
+        Loved this issue? <a href="REPLACE_WITH_YOUR_SIGNUP_URL" target="_blank" rel="noopener">Join the newsletter</a> so you don’t miss the next one.
+      </div>
+
+      <p style="margin-top:18px;opacity:.8">© <script>document.write(new Date().getFullYear())</script> Triple Gem Herbs.</p>
+    </main>
+  </body>
+  </html>
+  -->
+</body>
+</html>
