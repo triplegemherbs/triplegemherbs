@@ -327,13 +327,17 @@ a:hover {
       padding: 1rem;
       margin-bottom: 1rem;
     }
-/* FOOTER LAYOUT FIX */
+/* ---------------------------------------
+   FOOTER LAYOUT + STYLING (FINAL VERSION)
+---------------------------------------- */
+
+/* Footer container layout */
 .footer-container {
   max-width: 1100px;
   margin: 0 auto 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-content: space-between;
 }
 
@@ -342,10 +346,19 @@ a:hover {
   min-width: 240px;
 }
 
-/* Footer links */
+/* Footer headings */
+.site-footer h3,
+.site-footer h4 {
+  font-family: var(--font-header);
+  color: var(--cream);
+  margin-top: 0;
+}
+
+/* Footer link colors */
 .site-footer a {
   color: var(--peach);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .site-footer a:hover {
@@ -353,32 +366,55 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Quick links list */
 .footer-links {
   list-style: none;
   padding: 0;
-  margin: 0.5rem 0 0;
+  margin: 0.6rem 0 0;
 }
 
 .footer-links li {
-  margin: 0.25rem 0;
+  margin: 0.35rem 0;
 }
 
+/* Footer button (overrides base button design) */
+.footer-btn {
+  background-color: var(--peach) !important;
+  color: var(--forest-green) !important;
+  border: 2px solid var(--peach) !important;
+  padding: 0.75rem 1.3rem;
+  border-radius: 10px;
+  font-weight: 700;
+  display: inline-block;
+  transition: 0.25s ease;
+}
+
+.footer-btn:hover {
+  background-color: var(--gold-ochre) !important;
+  color: var(--forest-green) !important;
+  border-color: var(--gold-ochre) !important;
+  transform: scale(1.05);
+}
+
+/* Footer bottom */
 .footer-bottom {
   text-align: center;
   font-size: 0.92rem;
   opacity: 0.9;
-  border-top: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(255,255,255,0.25);
   padding-top: 1rem;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Mobile layout */
+/* Mobile stacking */
 @media (max-width: 700px) {
   .footer-container {
     flex-direction: column;
+    gap: 1.5rem;
   }
 }
+
     /* ------------------------------
        ✨ FOOTER
     ------------------------------ */
@@ -562,42 +598,50 @@ a:hover {
   <!-------------------------------
       FOOTER
   -------------------------------->
-  <footer class="site-footer">
-    <div class="footer-container">
-      
-      <div class="footer-col">
-        <h3>Triple Gem Herbs</h3>
-        <p>Herbal consulting & botanical education blending science and tradition.<br>
-        Based in Northern California • Serving clients everywhere.</p>
-        <p style="margin-top:1rem;">
-          <a href="#contact" class="btn btn-secondary">Book a Consultation</a>
-        </p>
-      </div>
+  <footer class="site-footer" role="contentinfo">
 
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <p>Instagram: <a href="https://instagram.com/triplegemherbs" target="_blank">@triplegemherbs</a></p>
-        <p>Prefer email? Use the <a href="#contact" style="color: var(--peach);">contact form</a>.</p>
-      </div>
+  <div class="footer-container">
 
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#offerings">Offerings</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="https://beacons.ai/triplegemherbs" target="_blank">Free Tea Guide</a></li>
-        </ul>
-      </div>
-
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <h3>Triple Gem Herbs</h3>
+      <p>
+        Herbal consulting & botanical education blending science and tradition.<br>
+        Based in Northern California • Serving clients everywhere.
+      </p>
+      <p style="margin-top: 1rem;">
+        <a href="#contact" class="footer-btn">Book a Consultation</a>
+      </p>
     </div>
 
-    <div class="footer-bottom">
-      © <span id="year"></span> Triple Gem Herbs • All Rights Reserved  
-      <br>Herbal information is for educational purposes only and not a substitute for medical advice.
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <p>Instagram: <a href="https://instagram.com/triplegemherbs" target="_blank">@triplegemherbs</a></p>
+      <p>Prefer email? Use the <a href="#contact">contact form</a>.</p>
     </div>
-  </footer>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#offerings">Offerings</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="https://beacons.ai/triplegemherbs" target="_blank">Free Tea Guide</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> Triple Gem Herbs • All Rights Reserved<br>
+    Herbal information is for educational purposes only and not a substitute for medical advice.
+  </div>
+
+</footer>
+
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
