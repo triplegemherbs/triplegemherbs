@@ -6,73 +6,57 @@
   <title>Newsletter Archive • Triple Gem Herbs</title>
   <meta name="description" content="Seasonal newsletter archive from Triple Gem Herbs — where science and tradition meet. Read past issues and subscribe for the next one." />
 
-  <!-- Brand Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Newsletter Archive • Triple Gem Herbs" />
   <meta property="og:description" content="Read past issues and subscribe to the Triple Gem Herbs seasonal newsletter." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-cover.jpg" />
 
   <style>
-    :root {
-      /* Brand colors */
-      --forest: #1e4d3a;   /* forest green */
-      --peach:  #f7d2b8;   /* peach tone */
-      --ink:    #1b1b1b;   /* body text */
-      --stone:  #f6f5f3;   /* light bg */
+    :root{
+      --forest:#1e4d3a;
+      --peach:#f7d2b8;
+      --ink:#1b1b1b;
+      --stone:#f6f5f3;
     }
-    html, body { margin: 0; padding: 0; font-family: "Lora", serif; color: var(--ink); background: var(--stone); }
-    a { color: var(--forest); text-decoration: underline; text-underline-offset: 2px; }
+    html,body{margin:0;padding:0;font-family:"Lora",serif;color:var(--ink);background:var(--stone);}
+    a{color:var(--forest);text-decoration:underline;text-underline-offset:2px;}
+    .container{width:min(1000px,92vw);margin:0 auto;}
 
-    /* Layout */
-    .container { width: min(1100px, 92vw); margin: 0 auto; }
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-bottom:1px solid #e7e4df;}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px;}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;}
+    .brand-mark{width:40px;height:40px;border-radius:12px;background:var(--forest);display:grid;place-items:center;color:#fff;font-family:"Special Elite",serif;font-size:18px;letter-spacing:.5px;}
+    .brand h1{font-family:"Special Elite",serif;font-size:18px;margin:0;letter-spacing:.5px;}
+    .nav-links{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;}
+    .btn{display:inline-block;padding:10px 14px;border-radius:14px;border:1px solid var(--forest);color:var(--forest);text-decoration:none;font-weight:700;}
+    .btn.fill{background:var(--forest);color:#fff;border-color:var(--forest);}
 
-    /* Header */
-    header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.85); backdrop-filter: blur(8px); border-bottom: 1px solid #e7e4df; }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
-    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
-    .brand-mark { width: 40px; height: 40px; border-radius: 12px; background: var(--forest); display: grid; place-items: center; color: white; font-family: "Special Elite", serif; font-size: 18px; letter-spacing: 0.5px; }
-    .brand h1 { font-family: "Special Elite", serif; font-size: 18px; margin: 0; letter-spacing: 0.5px; }
-    .nav-links { display: flex; gap: 16px; }
-    .btn { display: inline-block; padding: 10px 14px; border-radius: 14px; border: 1px solid var(--forest); color: var(--forest); text-decoration: none; font-weight: 600; }
-    .btn.fill { background: var(--forest); color: white; border-color: var(--forest); }
+    .hero{padding:46px 0 18px;}
+    .eyebrow{display:inline-block;background:var(--peach);color:#532b12;font-weight:800;padding:6px 10px;border-radius:999px;letter-spacing:.3px;}
+    .hero h2{font-family:"Special Elite",serif;font-size:clamp(28px,5vw,44px);line-height:1.1;margin:14px 0 10px;}
+    .hero p{font-size:clamp(16px,2.5vw,18px);margin:0;max-width:70ch;color:#333;}
 
-    /* Hero */
-    .hero { padding: 56px 0 18px; text-align: left; }
-    .eyebrow { display: inline-block; background: var(--peach); color: #532b12; font-weight: 700; padding: 6px 10px; border-radius: 999px; letter-spacing: 0.3px; }
-    .hero h2 { font-family: "Special Elite", serif; font-size: clamp(28px, 5vw, 44px); line-height: 1.1; margin: 14px 0 10px; }
-    .hero p { font-size: clamp(16px, 2.5vw, 18px); margin: 0; max-width: 68ch; }
+    .subscribe{background:linear-gradient(135deg,var(--peach),#ffe9db);border:1px solid #f7dcca;border-radius:20px;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+    .subscribe h4{margin:0;font-size:20px;}
+    .subscribe p{margin:6px 0 0;color:#3b2a1c;}
+    .subscribe .copy{max-width:70ch}
 
-    /* Archive grid */
-    .archive { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; padding: 24px 0 70px; }
-    .card { grid-column: span 12; background: #fff; border: 1px solid #ece8e2; border-radius: 18px; overflow: hidden; display: grid; grid-template-columns: 180px 1fr; min-height: 160px; }
-    .thumb { background: #eee; }
-    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .meta { padding: 16px 18px; display: grid; gap: 6px; align-content: center; }
-    .meta time { font-size: 13px; color: #666; letter-spacing: 0.3px; text-transform: uppercase; }
-    .meta h3 { margin: 4px 0 4px; font-size: 20px; line-height: 1.25; }
-    .meta p { margin: 0; color: #444; }
-    .meta .chips { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
-    .chip { font-size: 12px; background: #f3f0ec; color: #5a4d42; border-radius: 999px; padding: 4px 10px; border: 1px solid #e8e2da; }
-    .actions { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .archive{padding:20px 0 70px;display:grid;gap:14px;}
+    .card{background:#fff;border:1px solid #ece8e2;border-radius:18px;padding:16px 18px;}
+    .meta-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+    .meta time{font-size:12px;color:#666;letter-spacing:.3px;text-transform:uppercase;}
+    .meta h3{margin:10px 0 6px;font-size:22px;line-height:1.2;}
+    .meta p{margin:0;color:#444;max-width:80ch;}
+    .chips{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px;}
+    .chip{font-size:12px;background:#f3f0ec;color:#5a4d42;border-radius:999px;padding:4px 10px;border:1px solid #e8e2da;}
+    .actions{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;}
 
-    /* Subscribe panel */
-    .subscribe { background: linear-gradient(135deg, var(--peach), #ffe9db); border: 1px solid #f7dcca; border-radius: 20px; padding: 20px; display: grid; gap: 10px; }
-    .subscribe h4 { margin: 0; font-size: 20px; }
-    .subscribe p { margin: 0; }
-
-    /* Footer */
-    footer { border-top: 1px solid #e7e4df; padding: 30px 0 50px; font-size: 14px; color: #4a4a4a; }
-
-    /* Responsive */
-    @media (max-width: 820px) {
-      .card { grid-template-columns: 1fr; }
-      .thumb { height: 160px; }
-    }
+    footer{border-top:1px solid #e7e4df;padding:30px 0 50px;font-size:14px;color:#4a4a4a;}
   </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
@@ -92,70 +76,61 @@
     <section class="hero" aria-labelledby="archive-heading">
       <span class="eyebrow">Seasonal Archive</span>
       <h2 id="archive-heading">Newsletter — where science & tradition meet</h2>
-      <p>Browse past issues, then join the list to get the next one in your inbox. I share a featured herb, an easy recipe, and notes from the field each season.</p>
+      <p>Browse past issues, then join the list to get the next one in your inbox. Each season I share a featured herb, an easy recipe, and notes from the field.</p>
     </section>
 
-    <!-- Subscribe CTA -->
     <section id="subscribe" class="subscribe" aria-labelledby="subscribe-heading">
-      <h4 id="subscribe-heading">Subscribe for future issues</h4>
-      <p>Join the list for the next seasonal letter. No spam — unsubscribe anytime.</p>
-      <p>
-        <a class="btn fill" href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Sign up</a>
-      </p>
+      <div class="copy">
+        <h4 id="subscribe-heading">Subscribe for future issues</h4>
+        <p>Join the list for the next seasonal letter. No spam — unsubscribe anytime.</p>
+      </div>
+      <a class="btn fill" href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Sign up</a>
     </section>
 
-    <!-- Archive list -->
     <section class="archive" aria-label="Past issues">
 
-      <!-- Winter 2026 -->
-      <article class="card">
-        <div class="thumb" aria-hidden="true">
-          <!-- Replace with your real image path if you want -->
-          <img src="assets/newsletters/winter-2026.jpg" alt="Winter newsletter cover image" onerror="this.style.display='none'; this.parentElement.style.display='none';" />
-        </div>
-        <div class="meta">
+      <!-- Winter -->
+      <article class="card meta">
+        <div class="meta-top">
           <time datetime="2026-01-01">Winter 2026</time>
-          <h3>
-            <a href="https://preview.mailerlite.io/preview/1844714/emails/175589474235843586" target="_blank" rel="noopener">
-              Winter 2026 Newsletter
-            </a>
-          </h3>
-          <p>Seasonal reflections, field notes, and winter offerings from Triple Gem Herbs.</p>
-          <div class="chips" aria-label="Tags">
-            <span class="chip">Seasonal</span>
-            <span class="chip">Field Notes</span>
-            <span class="chip">Offerings</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://preview.mailerlite.io/preview/1844714/emails/175589474235843586" target="_blank" rel="noopener">Read issue →</a>
-            <a class="btn" href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Subscribe</a>
-          </div>
+          <span class="chip">Latest</span>
+        </div>
+        <h3>
+          <a href="https://preview.mailerlite.io/preview/1844714/emails/175589474235843586" target="_blank" rel="noopener">
+            Winter 2026 Newsletter
+          </a>
+        </h3>
+        <p>Seasonal reflections, field notes, and winter offerings from Triple Gem Herbs.</p>
+        <div class="chips" aria-label="Tags">
+          <span class="chip">Seasonal</span>
+          <span class="chip">Field Notes</span>
+          <span class="chip">Offerings</span>
+        </div>
+        <div class="actions">
+          <a class="btn fill" href="https://preview.mailerlite.io/preview/1844714/emails/175589474235843586" target="_blank" rel="noopener">Read issue →</a>
+          <a class="btn" href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Subscribe</a>
         </div>
       </article>
 
-      <!-- Autumn 2025 -->
-      <article class="card">
-        <div class="thumb" aria-hidden="true">
-          <!-- Replace with your real image path if you want -->
-          <img src="assets/newsletters/autumn-2025.jpg" alt="Autumn newsletter cover image" onerror="this.style.display='none'; this.parentElement.style.display='none';" />
-        </div>
-        <div class="meta">
+      <!-- Autumn -->
+      <article class="card meta">
+        <div class="meta-top">
           <time datetime="2025-10-01">Autumn 2025</time>
-          <h3>
-            <a href="https://preview.mailerlite.io/preview/1844714/emails/167704538000656184" target="_blank" rel="noopener">
-              Autumn 2025 Newsletter
-            </a>
-          </h3>
-          <p>Featured herb: <em>Usnea</em> • Cozy dandelion root “coffee” • Notes from the Emerald Triangle.</p>
-          <div class="chips" aria-label="Tags">
-            <span class="chip">Lichens</span>
-            <span class="chip">Recipes</span>
-            <span class="chip">Field Notes</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://preview.mailerlite.io/preview/1844714/emails/167704538000656184" target="_blank" rel="noopener">Read issue →</a>
-            <a class="btn" href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Subscribe</a>
-          </div>
+        </div>
+        <h3>
+          <a href="https://preview.mailerlite.io/preview/1844714/emails/167704538000656184" target="_blank" rel="noopener">
+            Autumn 2025 Newsletter
+          </a>
+        </h3>
+        <p>Featured herb: <em>Usnea</em> • Cozy dandelion root “coffee” • Notes from the Emerald Triangle.</p>
+        <div class="chips" aria-label="Tags">
+          <span class="chip">Lichens</span>
+          <span class="chip">Recipes</span>
+          <span class="chip">Field Notes</span>
+        </div>
+        <div class="actions">
+          <a class="btn fill" href="https://preview.mailerlite.io/preview/1844714/emails/167704538000656184" target="_blank" rel="noopener">Read issue →</a>
+          <a class="btn" href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Subscribe</a>
         </div>
       </article>
 
