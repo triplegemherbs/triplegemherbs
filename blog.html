@@ -26,6 +26,7 @@
     }
 
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: var(--font-body);
@@ -36,32 +37,36 @@
 
     a {
       color: var(--teal);
-      text-decoration-color: transparent;
-      transition: color 0.2s ease, text-decoration-color 0.2s ease;
-    }
-    a:hover {
-      color: var(--garnet);
-      text-decoration-color: currentColor;
+      text-decoration: none;
+      transition: color 0.2s ease;
     }
 
+    a:hover {
+      color: var(--garnet);
+      text-decoration: underline;
+    }
+
+    /* ------------------------------
+       HEADER (SOLID, NO GRADIENT)
+    ------------------------------ */
     header {
-      background: linear-gradient(180deg, var(--peach) 0%, var(--cream) 100%);
+      background: var(--cream);
       text-align: center;
       padding: 2.5rem 1rem 1.75rem;
       border-bottom: 2px solid var(--sage);
     }
 
     .site-logo {
-      max-width: 160px;
+      max-width: 150px;
       border-radius: 14px;
       border: 3px solid var(--forest-green);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
       margin-bottom: 1rem;
     }
 
     header h1 {
       font-family: var(--font-header);
-      font-size: 2.6rem;
+      font-size: 2.4rem;
       margin: 0;
     }
 
@@ -82,31 +87,32 @@
     }
 
     nav a {
-      text-decoration: none;
-      color: var(--forest-green);
       font-weight: bold;
       padding: 0.55rem 0.8rem;
       border-radius: 6px;
+      color: var(--forest-green);
       transition: 0.25s ease;
     }
+
     nav a:hover {
-      background-color: var(--teal);
+      background: var(--teal);
       color: #fff;
-      transform: scale(1.04);
     }
 
+    /* ------------------------------
+       MAIN CONTENT
+    ------------------------------ */
     section {
-      padding: 2.5rem 1rem;
+      padding: 2.75rem 1rem;
       max-width: 980px;
       margin: auto;
     }
 
     h2 {
       font-family: var(--font-header);
-      color: var(--forest-green);
+      border-bottom: 2px solid var(--peach);
       padding-bottom: 0.4rem;
       margin-top: 0;
-      border-bottom: 2px solid var(--peach);
     }
 
     .lede {
@@ -114,60 +120,73 @@
       margin: 1rem auto 0;
       color: #333341;
       font-size: 1.05rem;
+      text-align: center;
     }
 
-    .btn {
-      text-decoration: none;
-      padding: 0.8rem 1.4rem;
-      border-radius: 10px;
-      font-weight: 700;
-      display: inline-block;
-      transition: 0.2s ease;
-    }
-    .btn:hover { transform: scale(1.04); opacity: 0.96; }
-
-    .btn-primary { background: var(--forest-green); color: #fff; }
-    .btn-secondary {
-      background: var(--peach);
-      border: 2px solid var(--forest-green);
-      color: var(--forest-green);
-    }
-    .btn-secondary:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
-
+    /* ------------------------------
+       BLOG GRID
+    ------------------------------ */
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.25rem;
-      margin-top: 1.25rem;
+      gap: 1.4rem;
+      margin-top: 2rem;
     }
 
     .post-card {
       background: var(--cream);
       border: 2px solid var(--sage);
-      border-radius: 12px;
-      padding: 1.1rem;
-      transition: 0.2s ease;
+      border-radius: 14px;
+      padding: 1.25rem;
       display: flex;
       flex-direction: column;
-      gap: 0.6rem;
-      min-height: 220px;
+      gap: 0.7rem;
+      transition: 0.2s ease;
+      min-height: 230px;
     }
 
     .post-card:hover {
       transform: translateY(-4px);
       border-color: var(--gold-ochre);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
-    .post-meta { font-size: 0.9rem; opacity: 0.88; }
+    .post-meta {
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+
     .post-title {
       margin: 0;
       font-family: var(--font-header);
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       line-height: 1.25;
     }
-    .post-excerpt { margin: 0; color: #333341; flex: 1; }
 
+    .post-excerpt {
+      margin: 0;
+      color: #333341;
+      flex: 1;
+    }
+
+    .btn {
+      align-self: flex-start;
+      padding: 0.7rem 1.3rem;
+      border-radius: 10px;
+      font-weight: 700;
+      background: var(--forest-green);
+      color: #fff;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      background: var(--teal);
+      transform: scale(1.04);
+    }
+
+    /* ------------------------------
+       FOOTER
+    ------------------------------ */
     footer.site-footer {
       background: var(--forest-green);
       color: var(--cream);
@@ -186,79 +205,82 @@
     }
 
     @media (max-width: 700px) {
-      header h1 { font-size: 2.1rem; }
+      header h1 { font-size: 2rem; }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <img src="logo.jpeg" alt="Triple Gem Herbs Logo" class="site-logo" />
-    <h1>Field Notes</h1>
-    <p class="tagline">Science meets tradition — from the field</p>
 
-    <nav>
-      <ul>
-        <li><a href="index.html#hero">Home</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#offerings">Offerings</a></li>
-        <li><a href="index.html#events">Events</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="newsletter.html">Newsletter</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <img src="logo.jpeg" alt="Triple Gem Herbs Logo" class="site-logo" />
+  <h1>Field Notes</h1>
+  <p class="tagline">Science meets tradition — from the field</p>
 
-  <section>
-    <h2>Latest posts</h2>
-    <p class="lede">
-      Longer-form writing on botany, herbalism, restoration, and the redwood forests.
-    </p>
+  <nav>
+    <ul>
+      <li><a href="index.html#hero">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#offerings">Offerings</a></li>
+      <li><a href="index.html#events">Events</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="newsletter.html">Newsletter</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <div class="blog-grid">
+<section>
+  <h2>Latest posts</h2>
+  <p class="lede">
+    Longer-form writing on botany, herbalism, restoration, and the redwood forests.
+  </p>
 
-      <!-- POST CARD: copy/paste this block for each post -->
-      <article class="post-card">
-        <div class="post-meta">Featured • January 2026</div>
-        <h3 class="post-title">The Redwood Journey</h3>
-        <p class="post-excerpt">
-          A two-hour guided experience blending botany, embodied practice, and inner exploration—held in relationship with coastal redwoods.
-        </p>
-        <a class="btn btn-primary"
-   href="https://triplegemherbs.thesimple.ink/journeying-with-redwood-2eaa9b8e908c81699123e39b516b8fb6"
-   target="_blank" rel="noopener">
-  Read →
-</a>
-      </article>
+  <div class="blog-grid">
+
     <article class="post-card">
-        <div class="post-meta">Featured • January 2026</div>
-        <h3 class="post-title">A Winter Medicinal Mushroom Chai that’s fit for all seasons</h3>
-        <p class="post-excerpt">
-          Make a medicinal mushroom chai for immune support and relaxation.
-        </p>
-        <a class="btn btn-primary"
-   href="https://triplegemherbs.thesimple.ink/a-winter-medicinal-mushroom-chai-thats-fit-for-all-seasons-2eaa9b8e908c81909005d5545c265d59"
-   target="_blank" rel="noopener">
-  Read →
-</a>
-      </article>
-    </div>
+      <div class="post-meta">Featured • January 2026</div>
+      <h3 class="post-title">The Redwood Journey</h3>
+      <p class="post-excerpt">
+        A two-hour guided experience blending botany, embodied practice, and inner exploration—held in relationship with coastal redwoods.
+      </p>
+      <a class="btn"
+        href="https://triplegemherbs.thesimple.ink/journeying-with-redwood-2eaa9b8e908c81699123e39b516b8fb6"
+        target="_blank" rel="noopener">
+        Read →
+      </a>
+    </article>
 
-    <div style="text-align:center; margin-top: 1.25rem;">
-      <a class="btn btn-secondary" href="index.html#contact">Ask about a workshop</a>
-    </div>
-  </section>
+    <article class="post-card">
+      <div class="post-meta">January 2026</div>
+      <h3 class="post-title">A Winter Medicinal Mushroom Chai</h3>
+      <p class="post-excerpt">
+        A nourishing mushroom chai for immune support, grounding, and winter warmth.
+      </p>
+      <a class="btn"
+        href="https://triplegemherbs.thesimple.ink/a-winter-medicinal-mushroom-chai-thats-fit-for-all-seasons-2eaa9b8e908c81909005d5545c265d59"
+        target="_blank" rel="noopener">
+        Read →
+      </a>
+    </article>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-bottom">
-      © <span id="year"></span> Triple Gem Herbs • All Rights Reserved<br>
-      Herbal information is for educational purposes only and not a substitute for medical advice.
-    </div>
-  </footer>
+  </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <div style="text-align:center; margin-top:2rem;">
+    <a class="btn" href="index.html#contact">Ask about a workshop</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-bottom">
+    © <span id="year"></span> Triple Gem Herbs • All Rights Reserved<br>
+    Herbal information is for educational purposes only.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
