@@ -438,6 +438,32 @@ a:hover {
       .about-container { flex-direction: column; text-align: center; }
       .about-photo { margin-bottom: 1rem; }
     }
+/* ------------------------------
+   ✨ BLOG (NOTION EMBED)
+------------------------------ */
+#blog .blog-card {
+  background: var(--cream);
+  border: 2px solid var(--peach);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+
+#blog .notion-embed {
+  width: 100%;
+  height: 85vh;
+  border: 0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+#blog .blog-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+    
   </style>
 </head>
 
@@ -459,6 +485,7 @@ a:hover {
         <li><a href="#events">Events</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#instagram">Instagram</a></li>
       </ul>
@@ -497,6 +524,33 @@ a:hover {
       </div>
     </div>
   </section>
+<!-------------------------------
+    BLOG
+-------------------------------->
+<section id="blog">
+  <h2>Field Notes</h2>
+  <p>
+    Longer-form writing from the field—botany, herbalism, and reflections from the redwoods.
+  </p>
+
+  <div class="blog-card">
+    <iframe
+      class="notion-embed"
+      src="https://zesty-hamster-8bf.notion.site/Field-Notes-2eaa9b8e908c80abb499da77134514e2"
+      loading="lazy"
+      referrerpolicy="no-referrer"
+    ></iframe>
+
+    <div class="blog-actions">
+      <a class="btn btn-primary" href="https://zesty-hamster-8bf.notion.site/Field-Notes-2eaa9b8e908c80abb499da77134514e2" target="_blank" rel="noopener">
+        Open Field Notes →
+      </a>
+      <a class="btn btn-secondary" href="newsletter.html">
+        Subscribe
+      </a>
+    </div>
+  </div>
+</section>
 
   <!-------------------------------
       OFFERINGS
