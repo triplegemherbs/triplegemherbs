@@ -42,9 +42,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <!-- ===========================
-       ✨ BRAND NEW COLOR SYSTEM
-       =========================== -->
   <style>
     :root {
       --forest-green: #1E3F2B;
@@ -57,36 +54,40 @@
 
       --font-header: 'Special Elite', serif;
       --font-body: 'Lora', serif;
+
+      /* neutrals */
+      --paper: #ffffff;
+      --line: #e9e3da;
+      --shadow: 0 8px 22px rgba(0,0,0,0.08);
     }
 
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: var(--font-body);
       color: var(--forest-green);
-      background: #ffffff;
+      background: var(--cream); /* ✅ cream background sitewide */
       line-height: 1.65;
     }
 
     a {
-  color: var(--teal);
-  text-decoration-color: transparent;
-  transition: color 0.2s ease, text-decoration-color 0.2s ease;
-}
+      color: var(--teal);
+      text-decoration-color: transparent;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    }
+    a:hover {
+      color: var(--garnet);
+      text-decoration-color: currentColor;
+    }
 
-a:hover {
-  color: var(--garnet);
-  text-decoration-color: currentColor;
-}
-
-
-    img { max-width: 100%; height: auto; border-radius: 4px; }
+    img { max-width: 100%; height: auto; border-radius: 8px; }
 
     /* ------------------------------
-       🎨 HEADER
+       HEADER (NO GRADIENT)
     ------------------------------ */
     header {
-      background: linear-gradient(180deg, var(--peach) 0%, var(--cream) 100%);
+      background: var(--cream); /* ✅ solid */
       text-align: center;
       padding: 2.5rem 1rem 1.75rem;
       border-bottom: 2px solid var(--sage);
@@ -96,8 +97,9 @@ a:hover {
       max-width: 160px;
       border-radius: 14px;
       border: 3px solid var(--forest-green);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
       margin-bottom: 1rem;
+      background: var(--paper);
     }
 
     header h1 {
@@ -119,6 +121,7 @@ a:hover {
       gap: 1rem;
       list-style: none;
       padding: 0;
+      margin: 0;
     }
 
     nav a {
@@ -126,7 +129,7 @@ a:hover {
       color: var(--forest-green);
       font-weight: bold;
       padding: 0.55rem 0.8rem;
-      border-radius: 6px;
+      border-radius: 10px;
       transition: 0.25s ease;
     }
     nav a:hover {
@@ -136,25 +139,47 @@ a:hover {
     }
 
     /* ------------------------------
-       ✨ HERO SECTION
+       SECTIONS = PAPER CARDS
+    ------------------------------ */
+    section {
+      background: var(--paper);         /* ✅ white card */
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      padding: 2.5rem 1.25rem;
+      max-width: 900px;
+      margin: 2rem auto;                /* ✅ spaced cards */
+    }
+
+    h2 {
+      font-family: var(--font-header);
+      color: var(--forest-green);
+      padding-bottom: 0.4rem;
+      margin-top: 0;                    /* ✅ better inside cards */
+      border-bottom: 2px solid var(--peach);
+    }
+
+    /* ------------------------------
+       HERO (SOLID, NO GRADIENT)
     ------------------------------ */
     #hero {
-      background: var(--cream);
+      background: var(--peach);         /* ✅ solid peach */
+      border: 1px solid #e6c1a0;
+      box-shadow: var(--shadow);
       text-align: center;
-      padding: 4.5rem 1rem 3.5rem;
-      border-bottom: 2px solid var(--peach);
+      padding: 4rem 1.25rem 3.25rem;
     }
 
     .hero-title {
       font-family: var(--font-header);
       font-size: 2.5rem;
-      margin-bottom: 0.7rem;
+      margin: 0 0 0.7rem;
     }
 
     .hero-subtitle {
       max-width: 780px;
       margin: 0 auto 1.8rem;
-      color: #333341;
+      color: #2a2521;
       font-size: 1.15rem;
     }
 
@@ -183,11 +208,13 @@ a:hover {
       background: var(--forest-green);
       color: #fff;
     }
+
     .btn-secondary {
-      background: var(--peach);
+      background: var(--paper);
       border: 2px solid var(--forest-green);
       color: var(--forest-green);
     }
+
     .btn-secondary:hover {
       background: var(--teal);
       color: #fff;
@@ -195,24 +222,7 @@ a:hover {
     }
 
     /* ------------------------------
-       ✨ SECTIONS
-    ------------------------------ */
-    section {
-      padding: 2.5rem 1rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      font-family: var(--font-header);
-      color: var(--forest-green);
-      padding-bottom: 0.4rem;
-      margin-top: 2rem;
-      border-bottom: 2px solid var(--peach);
-    }
-
-    /* ------------------------------
-       ✨ ABOUT
+       ABOUT
     ------------------------------ */
     .about-container {
       display: flex;
@@ -228,7 +238,8 @@ a:hover {
       object-fit: cover;
       border-radius: 50%;
       border: 3px solid var(--forest-green);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+      background: var(--paper);
     }
 
     .about-text {
@@ -237,13 +248,25 @@ a:hover {
     }
 
     /* ------------------------------
-       ✨ OFFERINGS
+       BLOG CARD
+    ------------------------------ */
+    #blog .blog-card {
+      background: var(--cream);
+      border: 2px solid var(--peach);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    /* ------------------------------
+       OFFERINGS
     ------------------------------ */
     .offerings-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem;
       margin-top: 1.5rem;
+      padding-left: 0;
     }
 
     .offerings-list li {
@@ -258,16 +281,15 @@ a:hover {
     .offerings-list li:hover {
       transform: translateY(-4px);
       border-color: var(--gold-ochre);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
     }
 
     /* ------------------------------
-       ✨ CTA BOX
+       CTA BOX (NO GRADIENT)
     ------------------------------ */
     .cta-box {
-      background: var(--peach);
-      padding: 2.4rem;
-      border-radius: 1rem;
+      background: var(--cream);
+      border: 2px solid var(--peach);
       text-align: center;
     }
 
@@ -278,32 +300,26 @@ a:hover {
       background: var(--forest-green);
       color: #fff;
       font-weight: bold;
-      border-radius: 8px;
+      border-radius: 10px;
+      text-decoration: none;
     }
 
     /* ------------------------------
-       ✨ PUBLICATIONS
+       PUBLICATIONS
     ------------------------------ */
-    #publications {
-      background: var(--cream);
-      border: 2px solid var(--peach);
-      border-radius: 12px;
-      margin-top: 3rem;
-      padding: 2.4rem 1rem;
-    }
-
     .pub-item {
-      background: #fff;
+      background: var(--paper);
       border: 2px solid var(--peach);
       border-radius: 12px;
       padding: 1.5rem;
       transition: 0.2s ease;
+      margin-top: 1rem;
     }
 
     .pub-item:hover {
       transform: translateY(-4px);
       border-color: var(--forest-green);
-      box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
     }
 
     .pub-link {
@@ -312,13 +328,13 @@ a:hover {
       padding: 0.5rem 1rem;
       background: var(--forest-green);
       color: #fff;
-      border-radius: 6px;
+      border-radius: 8px;
       font-weight: bold;
       text-decoration: none;
     }
 
     /* ------------------------------
-       ✨ CONTACT
+       CONTACT
     ------------------------------ */
     .contact-card {
       background: var(--cream);
@@ -327,151 +343,105 @@ a:hover {
       padding: 1rem;
       margin-bottom: 1rem;
     }
-/* ---------------------------------------
-   FOOTER LAYOUT + STYLING (FINAL VERSION)
----------------------------------------- */
-
-/* Footer container layout */
-.footer-container {
-  max-width: 1100px;
-  margin: 0 auto 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-}
-
-.footer-col {
-  flex: 1 1 260px;
-  min-width: 240px;
-}
-
-/* Footer headings */
-.site-footer h3,
-.site-footer h4 {
-  font-family: var(--font-header);
-  color: var(--cream);
-  margin-top: 0;
-}
-
-/* Footer link colors */
-.site-footer a {
-  color: var(--peach);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.site-footer a:hover {
-  color: var(--gold-ochre);
-  text-decoration: underline;
-}
-
-/* Quick links list */
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0.6rem 0 0;
-}
-
-.footer-links li {
-  margin: 0.35rem 0;
-}
-
-/* Footer button (overrides base button design) */
-.footer-btn {
-  background-color: var(--peach) !important;
-  color: var(--forest-green) !important;
-  border: 2px solid var(--peach) !important;
-  padding: 0.75rem 1.3rem;
-  border-radius: 10px;
-  font-weight: 700;
-  display: inline-block;
-  transition: 0.25s ease;
-}
-
-.footer-btn:hover {
-  background-color: var(--gold-ochre) !important;
-  color: var(--forest-green) !important;
-  border-color: var(--gold-ochre) !important;
-  transform: scale(1.05);
-}
-
-/* Footer bottom */
-.footer-bottom {
-  text-align: center;
-  font-size: 0.92rem;
-  opacity: 0.9;
-  border-top: 1px solid rgba(255,255,255,0.25);
-  padding-top: 1rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* Mobile stacking */
-@media (max-width: 700px) {
-  .footer-container {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-}
 
     /* ------------------------------
-       ✨ FOOTER
+       FOOTER (NO CARD — GROUNDS PAGE)
     ------------------------------ */
     footer.site-footer {
       background: var(--forest-green);
       color: var(--cream);
       margin-top: 3rem;
       padding: 3rem 1rem 2rem;
+      box-shadow: none;
+      border-radius: 0;
+      border: none;
     }
 
-    .footer-links a:hover {
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    .footer-col {
+      flex: 1 1 260px;
+      min-width: 240px;
+    }
+
+    .site-footer h3,
+    .site-footer h4 {
+      font-family: var(--font-header);
+      color: var(--cream);
+      margin-top: 0;
+    }
+
+    .site-footer a {
+      color: var(--peach);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .site-footer a:hover {
       color: var(--gold-ochre);
+      text-decoration: underline;
     }
 
-    /* ------------------------------
-       ✨ RESPONSIVE
-    ------------------------------ */
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0.6rem 0 0;
+    }
+
+    .footer-links li {
+      margin: 0.35rem 0;
+    }
+
+    .footer-btn {
+      background-color: var(--peach);
+      color: var(--forest-green);
+      border: 2px solid var(--peach);
+      padding: 0.75rem 1.3rem;
+      border-radius: 10px;
+      font-weight: 700;
+      display: inline-block;
+      transition: 0.25s ease;
+      text-decoration: none;
+    }
+
+    .footer-btn:hover {
+      background-color: var(--gold-ochre);
+      color: var(--forest-green);
+      border-color: var(--gold-ochre);
+      transform: scale(1.05);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.92rem;
+      opacity: 0.9;
+      border-top: 1px solid rgba(255,255,255,0.25);
+      padding-top: 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Responsive */
     @media (max-width: 700px) {
       header h1 { font-size: 2.3rem; }
       .hero-title { font-size: 2rem; }
       .about-container { flex-direction: column; text-align: center; }
       .about-photo { margin-bottom: 1rem; }
+      section { margin: 1.25rem 0.9rem; }
     }
-/* ------------------------------
-   ✨ BLOG (NOTION EMBED)
------------------------------- */
-#blog .blog-card {
-  background: var(--cream);
-  border: 2px solid var(--peach);
-  border-radius: 12px;
-  padding: 1.25rem;
-  margin-top: 1rem;
-}
-
-#blog .notion-embed {
-  width: 100%;
-  height: 85vh;
-  border: 0;
-  border-radius: 12px;
-  background: #fff;
-}
-
-#blog .blog-actions {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-    
   </style>
 </head>
 
 <body>
 
-  <!-------------------------------
-      HEADER
-  -------------------------------->
+  <!-- HEADER -->
   <header>
     <img src="logo.jpeg" alt="Triple Gem Herbs Logo" class="site-logo" />
     <h1>Triple Gem Herbs</h1>
@@ -492,9 +462,7 @@ a:hover {
     </nav>
   </header>
 
-  <!-------------------------------
-      HERO
-  -------------------------------->
+  <!-- HERO -->
   <section id="hero">
     <h1 class="hero-title">Herbal Wisdom Rooted in Science</h1>
     <p class="hero-subtitle">
@@ -504,13 +472,11 @@ a:hover {
 
     <div class="hero-cta">
       <a id="bookConsultBtn" href="#contact" class="btn btn-primary">Book a Consultation</a>
-      <a href="https://beacons.ai/triplegemherbs" target="_blank" class="btn btn-secondary">Download the Tea Guide</a>
+      <a href="https://beacons.ai/triplegemherbs" target="_blank" class="btn btn-secondary" rel="noopener">Download the Tea Guide</a>
     </div>
   </section>
 
-  <!-------------------------------
-      ABOUT
-  -------------------------------->
+  <!-- ABOUT -->
   <section id="about">
     <h2>About Jasmine</h2>
 
@@ -524,48 +490,38 @@ a:hover {
       </div>
     </div>
   </section>
-<!-------------------------------
-    BLOG
--------------------------------->
-<section id="blog">
-  <h2>Field Notes</h2>
 
-  <p>
-    Longer-form writing from the field—botany, herbalism, restoration work,
-    and reflections from the redwood forests.
-  </p>
+  <!-- BLOG -->
+  <section id="blog">
+    <h2>Field Notes</h2>
 
-  <div style="
-    background: var(--cream);
-    border: 2px solid var(--peach);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-top: 1rem;
-  ">
-    <p style="margin-top:0;">
-      I write my Field Notes in Notion so I can publish quickly and keep them
-      alive and evolving.
+    <p>
+      Longer-form writing from the field—botany, herbalism, restoration work,
+      and reflections from the redwood forests.
     </p>
 
-    <a
-      class="btn btn-primary"
-      href="https://triplegemherbs.thesimple.ink/"
-      target="_blank"
-      rel="noopener"
-    >
-      Read the Field Notes →
-    </a>
+    <div class="blog-card">
+      <p style="margin-top:0;">
+        I write my Field Notes in Notion so I can publish quickly and keep them
+        alive and evolving.
+      </p>
 
-    <p style="margin-bottom:0; font-size:0.95rem; opacity:0.9;">
-      New posts appear there first.
-    </p>
-  </div>
-</section>
+      <a
+        class="btn btn-primary"
+        href="https://triplegemherbs.thesimple.ink/"
+        target="_blank"
+        rel="noopener"
+      >
+        Read the Field Notes →
+      </a>
 
+      <p style="margin-bottom:0; font-size:0.95rem; opacity:0.9;">
+        New posts appear there first.
+      </p>
+    </div>
+  </section>
 
-  <!-------------------------------
-      OFFERINGS
-  -------------------------------->
+  <!-- OFFERINGS -->
   <section id="offerings">
     <h2>Offerings</h2>
     <ul class="offerings-list">
@@ -576,109 +532,94 @@ a:hover {
     </ul>
   </section>
 
-  <!-------------------------------
-      FREE GUIDE
-  -------------------------------->
+  <!-- FREE GUIDE -->
   <section class="cta-box">
     <h2>Get Your Free Herbal Tea Guide</h2>
     <p>
       Discover time-tested brewing techniques, seasonal energetics, and simple add-ins—grounded in tradition and backed by plant science.
     </p>
-    <a href="https://beacons.ai/triplegemherbs" target="_blank">Download the Guide</a>
+    <a href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Download the Guide</a>
   </section>
 
-  <!-------------------------------
-      EVENTS
-  -------------------------------->
-<section id="events">
-  <h2>Upcoming Events</h2>
+  <!-- EVENTS -->
+  <section id="events">
+    <h2>Upcoming Events</h2>
 
-  <p><strong>Ace of Cups 80-hour Online Herb School</strong> (starts 1/26)</p>
+    <p><strong>Ace of Cups 80-hour Online Herb School</strong> (starts 1/26)</p>
 
-  <img
-    src="herbschool.png"
-    alt="Herb School upcoming workshop flyer"
-    style="
-      max-width: 700px;
-      width: 100%;
-      display: block;
-      margin: 1.5rem auto;
-      border-radius: 12px;
-      border: 2px solid var(--sage);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    "
-  />
+    <img
+      src="herbschool.png"
+      alt="Herb School upcoming workshop flyer"
+      style="
+        max-width: 700px;
+        width: 100%;
+        display: block;
+        margin: 1.5rem auto;
+        border-radius: 12px;
+        border: 2px solid var(--sage);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+      "
+    />
 
-  <p style="text-align:center; margin-top:1.5rem;">
-    As part of the Ace of Cups School of Botanical Alchemy & Herbcraft, Jasmine Zenderland offers coursework rooted in botanical science and traditional herbal wisdom. Her teaching invites students to move beyond memorization and into real relationship with plants—understanding not just what herbs do, but why.
-  </p>
+    <p style="text-align:center; margin-top:1.5rem;">
+      As part of the Ace of Cups School of Botanical Alchemy & Herbcraft, Jasmine Zenderland offers coursework rooted in botanical science and traditional herbal wisdom. Her teaching invites students to move beyond memorization and into real relationship with plants—understanding not just what herbs do, but why.
+    </p>
 
-  <p style="text-align:center;">
-    Jasmine teaches classes including <strong>Botany for Herbalists</strong>, <strong>Medicinal Mushrooms</strong>, <strong>Phytochemistry &amp; Herbal Constituents</strong>, and system-focused courses on <strong>Respiratory</strong>, <strong>Urinary</strong>, and <strong>Pregnancy-related</strong> herbal support.
-  </p>
+    <p style="text-align:center;">
+      Jasmine teaches classes including <strong>Botany for Herbalists</strong>, <strong>Medicinal Mushrooms</strong>, <strong>Phytochemistry &amp; Herbal Constituents</strong>, and system-focused courses on <strong>Respiratory</strong>, <strong>Urinary</strong>, and <strong>Pregnancy-related</strong> herbal support.
+    </p>
 
-  <div style="text-align:center; margin-top: 1.25rem;">
-    <a href="https://aceofcupsaustin.com" target="_blank" rel="noopener" class="btn btn-primary">
-      Learn more about the program →
-    </a>
-  </div>
+    <div style="text-align:center; margin-top: 1.25rem;">
+      <a href="https://aceofcupsaustin.com" target="_blank" rel="noopener" class="btn btn-primary">
+        Learn more about the program →
+      </a>
+    </div>
 
-  <p style="text-align:center; margin-top: 1.25rem;">
-    Want updates on workshops and plant walks? Join my email list:
-  </p>
+    <p style="text-align:center; margin-top: 1.25rem;">
+      Want updates on workshops and plant walks? Join my email list:
+    </p>
 
-  <div style="text-align:center;">
-    <a href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener" class="btn btn-secondary">
-      Join the Email List
-    </a>
-  </div>
-</section>
-
-
-
-  <!-------------------------------
-      PUBLICATIONS
-  -------------------------------->
-  <section id="publications">
-    <h2>Publications & Features</h2>
-
-    <p>Jasmine’s work has been featured in scientific journals, policy briefs, and educational platforms.</p>
-
-    <div class="pub-list">
-
-      <article class="pub-item">
-        <h3>Food as Medicine: Lion’s Mane (<em>Hericium erinaceus</em>)</h3>
-        <p><em>HerbalEGram</em>, American Botanical Council — September 2024</p>
-        <p>Co-authored feature exploring traditional uses, modern research, and culinary applications of lion’s mane mushroom.</p>
-        <a href="https://www.herbalgram.org/resources/herbalegram/volumes/volume-21/issue-9-september/news-and-features-3-1/fam-lions-mane/" target="_blank" class="pub-link">Read Article →</a>
-      </article>
-
-      <article class="pub-item">
-        <h3>The Use of “Use Value”: Quantifying Importance in Ethnobotany</h3>
-        <p><em>Economic Botany</em> (Springer) — October 2019</p>
-        <p>Peer-reviewed study examining how “use value” varies between cultivated and wild plants across ethnobotanical datasets.</p>
-        <a href="https://link.springer.com/article/10.1007/s12231-019-09480-1" target="_blank" class="pub-link">Read Article →</a>
-      </article>
-
-      <article class="pub-item">
-        <h3>Herbal Supplements and Consumer Safety</h3>
-        <p>MOST Policy Initiative / AAAS — August 2023</p>
-        <p>Community science note on regulation, safety challenges, and consumer considerations of herbal supplements in Missouri.</p>
-        <a href="https://mostpolicyinitiative.org/wp-content/uploads/2023/12/Most-Note-Herbal-Supplements-9_25_23.pdf" target="_blank" class="pub-link">Read Brief →</a>
-      </article>
-
+    <div style="text-align:center;">
+      <a href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener" class="btn btn-secondary">
+        Join the Email List
+      </a>
     </div>
   </section>
 
-  <!-------------------------------
-      CONTACT
-  -------------------------------->
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>Publications & Features</h2>
+    <p>Jasmine’s work has been featured in scientific journals, policy briefs, and educational platforms.</p>
+
+    <article class="pub-item">
+      <h3>Food as Medicine: Lion’s Mane (<em>Hericium erinaceus</em>)</h3>
+      <p><em>HerbalEGram</em>, American Botanical Council — September 2024</p>
+      <p>Co-authored feature exploring traditional uses, modern research, and culinary applications of lion’s mane mushroom.</p>
+      <a href="https://www.herbalgram.org/resources/herbalegram/volumes/volume-21/issue-9-september/news-and-features-3-1/fam-lions-mane/" target="_blank" class="pub-link" rel="noopener">Read Article →</a>
+    </article>
+
+    <article class="pub-item">
+      <h3>The Use of “Use Value”: Quantifying Importance in Ethnobotany</h3>
+      <p><em>Economic Botany</em> (Springer) — October 2019</p>
+      <p>Peer-reviewed study examining how “use value” varies between cultivated and wild plants across ethnobotanical datasets.</p>
+      <a href="https://link.springer.com/article/10.1007/s12231-019-09480-1" target="_blank" class="pub-link" rel="noopener">Read Article →</a>
+    </article>
+
+    <article class="pub-item">
+      <h3>Herbal Supplements and Consumer Safety</h3>
+      <p>MOST Policy Initiative / AAAS — August 2023</p>
+      <p>Community science note on regulation, safety challenges, and consumer considerations of herbal supplements in Missouri.</p>
+      <a href="https://mostpolicyinitiative.org/wp-content/uploads/2023/12/Most-Note-Herbal-Supplements-9_25_23.pdf" target="_blank" class="pub-link" rel="noopener">Read Brief →</a>
+    </article>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact</h2>
 
     <div class="contact-card">
       <p><strong>Reach out:</strong> Use the form below or DM me on Instagram</p>
-      <p><strong>Instagram:</strong> <a href="https://www.instagram.com/triplegemherbs" target="_blank">@triplegemherbs</a></p>
+      <p><strong>Instagram:</strong> <a href="https://www.instagram.com/triplegemherbs" target="_blank" rel="noopener">@triplegemherbs</a></p>
       <p><strong>Location:</strong> Northern California • Serving clients everywhere</p>
     </div>
 
@@ -687,65 +628,55 @@ a:hover {
       width="100%" height="900" frameborder="0"></iframe>
   </section>
 
-  <!-------------------------------
-      INSTAGRAM
-  -------------------------------->
+  <!-- INSTAGRAM -->
   <section id="instagram">
     <h2>From Instagram</h2>
     <p style="text-align:center;">
-      <a href="https://www.instagram.com/triplegemherbs/" target="_blank" style="color: var(--teal); font-weight:bold;">
+      <a href="https://www.instagram.com/triplegemherbs/" target="_blank" rel="noopener" style="color: var(--teal); font-weight:bold;">
         → Follow me on Instagram
       </a>
     </p>
   </section>
 
-  <!-------------------------------
-      FOOTER
-  -------------------------------->
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
 
-  <div class="footer-container">
+      <div class="footer-col">
+        <h3>Triple Gem Herbs</h3>
+        <p>
+          Herbal consulting & botanical education blending science and tradition.<br>
+          Based in Northern California • Serving clients everywhere.
+        </p>
+        <p style="margin-top: 1rem;">
+          <a href="#contact" class="footer-btn">Book a Consultation</a>
+        </p>
+      </div>
 
-    <!-- Column 1 -->
-    <div class="footer-col">
-      <h3>Triple Gem Herbs</h3>
-      <p>
-        Herbal consulting & botanical education blending science and tradition.<br>
-        Based in Northern California • Serving clients everywhere.
-      </p>
-      <p style="margin-top: 1rem;">
-        <a href="#contact" class="footer-btn">Book a Consultation</a>
-      </p>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <p>Instagram: <a href="https://instagram.com/triplegemherbs" target="_blank" rel="noopener">@triplegemherbs</a></p>
+        <p>Prefer email? Use the <a href="#contact">contact form</a>.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#offerings">Offerings</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Free Tea Guide</a></li>
+        </ul>
+      </div>
+
     </div>
 
-    <!-- Column 2 -->
-    <div class="footer-col">
-      <h4>Connect</h4>
-      <p>Instagram: <a href="https://instagram.com/triplegemherbs" target="_blank">@triplegemherbs</a></p>
-      <p>Prefer email? Use the <a href="#contact">contact form</a>.</p>
+    <div class="footer-bottom">
+      © <span id="year"></span> Triple Gem Herbs • All Rights Reserved<br>
+      Herbal information is for educational purposes only and not a substitute for medical advice.
     </div>
-
-    <!-- Column 3 -->
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul class="footer-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#offerings">Offerings</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="https://beacons.ai/triplegemherbs" target="_blank">Free Tea Guide</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © <span id="year"></span> Triple Gem Herbs • All Rights Reserved<br>
-    Herbal information is for educational purposes only and not a substitute for medical advice.
-  </div>
-
-</footer>
-
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
