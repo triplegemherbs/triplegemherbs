@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Field Notes • Triple Gem Herbs</title>
+
+  <meta name="description" content="Field Notes from Triple Gem Herbs — botany, herbalism, and reflections from the redwoods.">
+  <meta name="author" content="Jasmine Zenderland">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <style>
+    :root {
+      --forest-green: #1E3F2B;
+      --peach: #EFC8A4;
+      --cream: #F8F5EF;
+      --teal: #2A6F6A;
+      --gold-ochre: #D9A441;
+      --garnet: #7B2F3A;
+      --sage: #A8B398;
+
+      --font-header: 'Special Elite', serif;
+      --font-body: 'Lora', serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--forest-green);
+      background: #ffffff;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--teal);
+      text-decoration-color: transparent;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    }
+    a:hover {
+      color: var(--garnet);
+      text-decoration-color: currentColor;
+    }
+
+    header {
+      background: linear-gradient(180deg, var(--peach) 0%, var(--cream) 100%);
+      text-align: center;
+      padding: 2.5rem 1rem 1.75rem;
+      border-bottom: 2px solid var(--sage);
+    }
+
+    .site-logo {
+      max-width: 160px;
+      border-radius: 14px;
+      border: 3px solid var(--forest-green);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-family: var(--font-header);
+      font-size: 2.6rem;
+      margin: 0;
+    }
+
+    .tagline {
+      font-style: italic;
+      margin: 0.4rem 0 1.4rem;
+      color: var(--teal);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--forest-green);
+      font-weight: bold;
+      padding: 0.55rem 0.8rem;
+      border-radius: 6px;
+      transition: 0.25s ease;
+    }
+    nav a:hover {
+      background-color: var(--teal);
+      color: #fff;
+      transform: scale(1.04);
+    }
+
+    section {
+      padding: 2.5rem 1rem;
+      max-width: 980px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: var(--font-header);
+      color: var(--forest-green);
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      border-bottom: 2px solid var(--peach);
+    }
+
+    .lede {
+      max-width: 860px;
+      margin: 1rem auto 0;
+      color: #333341;
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 0.8rem 1.4rem;
+      border-radius: 10px;
+      font-weight: 700;
+      display: inline-block;
+      transition: 0.2s ease;
+    }
+    .btn:hover { transform: scale(1.04); opacity: 0.96; }
+
+    .btn-primary { background: var(--forest-green); color: #fff; }
+    .btn-secondary {
+      background: var(--peach);
+      border: 2px solid var(--forest-green);
+      color: var(--forest-green);
+    }
+    .btn-secondary:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+
+    .post-card {
+      background: var(--cream);
+      border: 2px solid var(--sage);
+      border-radius: 12px;
+      padding: 1.1rem;
+      transition: 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      min-height: 220px;
+    }
+
+    .post-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-ochre);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .post-meta { font-size: 0.9rem; opacity: 0.88; }
+    .post-title {
+      margin: 0;
+      font-family: var(--font-header);
+      font-size: 1.25rem;
+      line-height: 1.25;
+    }
+    .post-excerpt { margin: 0; color: #333341; flex: 1; }
+
+    footer.site-footer {
+      background: var(--forest-green);
+      color: var(--cream);
+      margin-top: 3rem;
+      padding: 3rem 1rem 2rem;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.92rem;
+      opacity: 0.9;
+      border-top: 1px solid rgba(255,255,255,0.25);
+      padding-top: 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 700px) {
+      header h1 { font-size: 2.1rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.jpeg" alt="Triple Gem Herbs Logo" class="site-logo" />
+    <h1>Field Notes</h1>
+    <p class="tagline">Science meets tradition — from the field</p>
+
+    <nav>
+      <ul>
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#offerings">Offerings</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Latest posts</h2>
+    <p class="lede">
+      Longer-form writing on botany, herbalism, restoration, and the redwood forests.
+    </p>
+
+    <div class="blog-grid">
+
+      <!-- POST CARD: copy/paste this block for each post -->
+      <article class="post-card">
+        <div class="post-meta">Featured • January 2026</div>
+        <h3 class="post-title">The Redwood Journey</h3>
+        <p class="post-excerpt">
+          A two-hour guided experience blending botany, embodied practice, and inner exploration—held in relationship with coastal redwoods.
+        </p>
+        <a class="btn btn-primary" href="posts/redwood-journey.html">Read →</a>
+      </article>
+
+    </div>
+
+    <div style="text-align:center; margin-top: 1.25rem;">
+      <a class="btn btn-secondary" href="index.html#contact">Ask about a workshop</a>
+    </div>
+  </section>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-bottom">
+      © <span id="year"></span> Triple Gem Herbs • All Rights Reserved<br>
+      Herbal information is for educational purposes only and not a substitute for medical advice.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
