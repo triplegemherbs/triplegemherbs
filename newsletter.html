@@ -56,7 +56,7 @@
     .meta p { margin: 0; color: #444; }
     .meta .chips { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
     .chip { font-size: 12px; background: #f3f0ec; color: #5a4d42; border-radius: 999px; padding: 4px 10px; border: 1px solid #e8e2da; }
-    .actions { margin-top: 12px; display: flex; gap: 10px; }
+    .actions { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
 
     /* Subscribe panel */
     .subscribe { background: linear-gradient(135deg, var(--peach), #ffe9db); border: 1px solid #f7dcca; border-radius: 20px; padding: 20px; display: grid; gap: 10px; }
@@ -95,11 +95,10 @@
       <p>Browse past issues, then join the list to get the next one in your inbox. I share a featured herb, an easy recipe, and notes from the field each season.</p>
     </section>
 
-    <!-- Subscribe CTA (MailerLite or Beacons) -->
+    <!-- Subscribe CTA -->
     <section id="subscribe" class="subscribe" aria-labelledby="subscribe-heading">
       <h4 id="subscribe-heading">Subscribe for future issues</h4>
       <p>Join the list for the next seasonal letter. No spam — unsubscribe anytime.</p>
-      <!-- Replace the link below with your real signup URL -->
       <p>
         <a class="btn fill" href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Sign up</a>
       </p>
@@ -108,36 +107,64 @@
     <!-- Archive list -->
     <section class="archive" aria-label="Past issues">
 
-      <!-- EXAMPLE CARD (Autumn 2025). Duplicate for future issues. -->
+      <!-- Winter 2026 -->
       <article class="card">
         <div class="thumb" aria-hidden="true">
-          <!-- Replace with your real image path -->
-          <img src="usnea.jpg" alt="An usnea lichen hanging from a tree" />
+          <!-- Replace with your real image path if you want -->
+          <img src="assets/newsletters/winter-2026.jpg" alt="Winter newsletter cover image" onerror="this.style.display='none'; this.parentElement.style.display='none';" />
         </div>
         <div class="meta">
-          <time datetime="2025-10-12">Autumn 2025</time>
-          <h3><a href="newsletters/autumn-2025.html">Usnea, cozy dandelion “coffee,” and fall field notes</a></h3>
-          <p>Featured herb: <em>Usnea</em> • Simple recipe: roasted-dandelion root “coffee” • Notes from the Emerald Triangle.</p>
+          <time datetime="2026-01-01">Winter 2026</time>
+          <h3>
+            <a href="https://preview.mailerlite.io/preview/1844714/emails/175589474235843586" target="_blank" rel="noopener">
+              Winter 2026 Newsletter
+            </a>
+          </h3>
+          <p>Seasonal reflections, field notes, and winter offerings from Triple Gem Herbs.</p>
           <div class="chips" aria-label="Tags">
-            <span class="chip">Lichens</span>
             <span class="chip">Seasonal</span>
-            <span class="chip">Recipes</span>
+            <span class="chip">Field Notes</span>
+            <span class="chip">Offerings</span>
           </div>
           <div class="actions">
-            <a class="btn" href="newsletters/autumn-2025.html">Read issue</a>
-           <a class="btn" href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Subscribe</a>
+            <a class="btn" href="https://preview.mailerlite.io/preview/1844714/emails/175589474235843586" target="_blank" rel="noopener">Read issue →</a>
+            <a class="btn" href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Subscribe</a>
           </div>
         </div>
       </article>
 
-      <!-- Add more <article class="card"> blocks here for Winter/Spring/Summer, etc. -->
+      <!-- Autumn 2025 -->
+      <article class="card">
+        <div class="thumb" aria-hidden="true">
+          <!-- Replace with your real image path if you want -->
+          <img src="assets/newsletters/autumn-2025.jpg" alt="Autumn newsletter cover image" onerror="this.style.display='none'; this.parentElement.style.display='none';" />
+        </div>
+        <div class="meta">
+          <time datetime="2025-10-01">Autumn 2025</time>
+          <h3>
+            <a href="https://preview.mailerlite.io/preview/1844714/emails/167704538000656184" target="_blank" rel="noopener">
+              Autumn 2025 Newsletter
+            </a>
+          </h3>
+          <p>Featured herb: <em>Usnea</em> • Cozy dandelion root “coffee” • Notes from the Emerald Triangle.</p>
+          <div class="chips" aria-label="Tags">
+            <span class="chip">Lichens</span>
+            <span class="chip">Recipes</span>
+            <span class="chip">Field Notes</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://preview.mailerlite.io/preview/1844714/emails/167704538000656184" target="_blank" rel="noopener">Read issue →</a>
+            <a class="btn" href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Subscribe</a>
+          </div>
+        </div>
+      </article>
 
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p><strong>Triple Gem Herbs</strong> — herbal consulting & botanical education. Humboldt County, CA.</p>
+      <p><strong>Triple Gem Herbs</strong> — herbal consulting & botanical education. Northern California.</p>
       <p>
         <a href="https://instagram.com/triplegemherbs" target="_blank" rel="noopener">Instagram</a> ·
         <a href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Beacons</a> ·
@@ -148,67 +175,7 @@
   </footer>
 
   <script>
-    // dynamic year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
-  <!--
-  ──────────────────────────────────────────────────────────────
-  HOW TO USE THIS PAGE
-  1) Save this file as newsletter.html in your repo root.
-  2) In index.html, add a nav link to "/newsletter.html".
-  3) For each issue, create a file in /newsletters/ (e.g., newsletters/autumn-2025.html)
-     and add a matching image in /assets/newsletters/.
-  4) Duplicate the <article class="card"> block for each additional issue.
-  5) Replace REPLACE_WITH_YOUR_SIGNUP_URL with your real Beacons or MailerLite URL.
-
-  BONUS: A minimal single-issue template you can copy to newsletters/autumn-2025.html ↓
-  ──────────────────────────────────────────────────────────────
-  -->
-
-  <!--
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Autumn 2025 • Triple Gem Herbs Newsletter</title>
-    <meta name="description" content="Usnea, roasted dandelion root ‘coffee,’ and field notes from the Emerald Triangle." />
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-      body { margin:0; font-family: Lora, serif; color:#1b1b1b; background:#f6f5f3; }
-      main { width:min(800px,92vw); margin: 40px auto; background:#fff; border:1px solid #ece8e2; border-radius:18px; padding:28px; }
-      h1 { font-family: "Special Elite", serif; margin: 0 0 6px; }
-      time { font-size:13px; color:#666; text-transform:uppercase; letter-spacing:.3px; }
-      .hero { border-radius:16px; overflow:hidden; border:1px solid #eee; margin: 16px 0 22px; }
-      img { width:100%; height:auto; display:block; }
-      .subscribe { background: #f7d2b8; padding: 14px; border-radius: 12px; border:1px solid #f7dcca; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <a href="../newsletter.html" style="text-decoration:none;color:#1e4d3a;">← Back to archive</a>
-      <h1>Usnea, cozy dandelion “coffee,” and fall field notes</h1>
-      <time datetime="2025-10-12">Autumn 2025</time>
-      <div class="hero"><img src="../assets/newsletters/autumn-2025-hero.jpg" alt="Dandelion coffee brewing and Usnea lichen." /></div>
-
-      <h2>Featured Herb: <em>Usnea</em> (Usnea spp.)</h2>
-      <p>Short lead paragraph… (paste your content here). If quoting sources, add a references section at the end.</p>
-
-      <h2>Recipe: Roasted dandelion root “coffee”</h2>
-      <p>Short method + ingredients…</p>
-
-      <h2>Notes from the field</h2>
-      <p>Two–three short paragraphs with a field photo if desired.</p>
-
-      <div class="subscribe">
-        Loved this issue? <a href="REPLACE_WITH_YOUR_SIGNUP_URL" target="_blank" rel="noopener">Join the newsletter</a> so you don’t miss the next one.
-      </div>
-
-      <p style="margin-top:18px;opacity:.8">© <script>document.write(new Date().getFullYear())</script> Triple Gem Herbs.</p>
-    </main>
-  </body>
-  </html>
-  -->
 </body>
 </html>
