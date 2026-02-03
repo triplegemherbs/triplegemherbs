@@ -52,6 +52,10 @@
       --gold-ochre: #D9A441;
       --garnet: #7B2F3A;
       --sage: #A8B398;
+      --accent: #944592;
+--accent-dark: #7d3b7b;   /* hover */
+--accent-soft: rgba(148, 69, 146, 0.12);
+
 
       --font-header: 'Special Elite', serif;
       --font-body: 'Lora', serif;
@@ -77,10 +81,16 @@
       text-decoration-color: transparent;
       transition: color 0.2s ease, text-decoration-color 0.2s ease;
     }
-    a:hover {
-      color: var(--garnet);
-      text-decoration-color: currentColor;
-    }
+a {
+  color: var(--accent);
+  text-decoration-color: transparent;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+a:hover {
+  color: var(--accent-dark);
+  text-decoration-color: currentColor;
+}
+
 
     img { max-width: 100%; height: auto; border-radius: 8px; }
 
@@ -133,11 +143,12 @@
       border-radius: 10px;
       transition: 0.25s ease;
     }
-    nav a:hover {
-      background-color: var(--teal);
-      color: #fff;
-      transform: scale(1.04);
-    }
+ nav a:hover {
+  background-color: var(--accent);
+  color: #fff;
+  transform: scale(1.04);
+}
+
 
     /* ------------------------------
        SECTIONS = PAPER CARDS
@@ -151,14 +162,14 @@
       max-width: 900px;
       margin: 2rem auto;                /* ✅ spaced cards */
     }
+h2 {
+  font-family: var(--font-header);
+  color: var(--forest-green);
+  padding-bottom: 0.4rem;
+  margin-top: 0;
+  border-bottom: 2px solid var(--accent);
+}
 
-    h2 {
-      font-family: var(--font-header);
-      color: var(--forest-green);
-      padding-bottom: 0.4rem;
-      margin-top: 0;                    /* ✅ better inside cards */
-      border-bottom: 2px solid var(--peach);
-    }
 
     /* ------------------------------
        HERO (SOLID, NO GRADIENT)
@@ -205,22 +216,27 @@
       opacity: 0.96;
     }
 
-    .btn-primary {
-      background: var(--forest-green);
-      color: #fff;
-    }
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
 
-    .btn-secondary {
-      background: var(--paper);
-      border: 2px solid var(--forest-green);
-      color: var(--forest-green);
-    }
+.btn-primary:hover {
+  background: var(--accent-dark);
+}
 
-    .btn-secondary:hover {
-      background: var(--teal);
-      color: #fff;
-      border-color: var(--teal);
-    }
+.btn-secondary {
+  background: var(--paper);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
 
     /* ------------------------------
        ABOUT
@@ -288,22 +304,22 @@
     /* ------------------------------
        CTA BOX (NO GRADIENT)
     ------------------------------ */
-    .cta-box {
-      background: var(--cream);
-      border: 2px solid var(--peach);
-      text-align: center;
-    }
+.cta-box a {
+  display: inline-block;
+  margin-top: 1.4rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+.cta-box a:hover {
+  background: var(--accent-dark);
+  transform: scale(1.04);
+}
 
-    .cta-box a {
-      display: inline-block;
-      margin-top: 1.4rem;
-      padding: 0.75rem 1.5rem;
-      background: var(--forest-green);
-      color: #fff;
-      font-weight: bold;
-      border-radius: 10px;
-      text-decoration: none;
-    }
 
     /* ------------------------------
        PUBLICATIONS
@@ -542,20 +558,32 @@
     <a href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Download the Guide</a>
   </section>
   
-<!-- Food as Medicine Zine -->
- <!-- FOOD AS MEDICINE ZINE -->
-<section id="zine" class="card">
+<!-- FOOD AS MEDICINE ZINE -->
+<section id="zine">
   <h2>Food as Medicine Zine</h2>
 
   <div style="text-align:center; margin-top: 1rem;">
-    <a href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">
+    <a href="https://shop.beacons.ai/triplegemherbs/b6b7e6c7-570a-4bb5-85e5-ed9c13bcb980" target="_blank" rel="noopener">
       <img
         src="assets/food-as-medicine-zine.jpg"
         alt="Food as Medicine zine cover"
-        style="width:100%; max-width:520px; height:auto; display:block; margin: 0 auto; border-radius: 12px;"
+        style="width:100%; max-width:520px; height:auto; display:block; margin: 0 auto; border-radius: 12px; border: 2px solid var(--accent);"
       >
     </a>
   </div>
+
+  <p style="text-align:center; margin-top: 1rem;">
+    A food-as-medicine zine exploring everyday herbalism through plants, tradition,
+    and practical kitchen wisdom.
+  </p>
+
+  <div style="text-align:center; margin-top: 1rem;">
+    <a href="https://shop.beacons.ai/triplegemherbs/b6b7e6c7-570a-4bb5-85e5-ed9c13bcb980" target="_blank" rel="noopener" class="btn btn-secondary">
+      Read the Zine
+    </a>
+  </div>
+</section>
+
 
   <p style="text-align:center; margin-top: 1rem;">
     A food-as-medicine zine exploring everyday herbalism through plants, tradition,
