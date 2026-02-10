@@ -42,442 +42,13 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png" />
-
-  <style>
-    :root {
-      --forest-green: #1E3F2B;
-      --peach: #EFC8A4;
-      --cream: #F8F5EF;
-      --teal: #2A6F6A;
-      --gold-ochre: #D9A441;
-      --garnet: #7B2F3A;
-      --sage: #A8B398;
-      --accent: #944592;
---accent-dark: #7d3b7b;   /* hover */
---accent-soft: rgba(148, 69, 146, 0.12);
-
-
-      --font-header: 'Special Elite', serif;
-      --font-body: 'Lora', serif;
-
-      /* neutrals */
-      --paper: #ffffff;
-      --line: #e9e3da;
-      --shadow: 0 8px 22px rgba(0,0,0,0.08);
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: var(--font-body);
-      color: var(--forest-green);
-      background: var(--cream); /* ✅ cream background sitewide */
-      line-height: 1.65;
-    }
-
-    a {
-      color: var(--teal);
-      text-decoration-color: transparent;
-      transition: color 0.2s ease, text-decoration-color 0.2s ease;
-    }
-a {
-  color: var(--accent);
-  text-decoration-color: transparent;
-  transition: color 0.2s ease, text-decoration-color 0.2s ease;
-}
-a:hover {
-  color: var(--accent-dark);
-  text-decoration-color: currentColor;
-}
-
-
-    img { max-width: 100%; height: auto; border-radius: 8px; }
-
-    /* ------------------------------
-       HEADER (NO GRADIENT)
-    ------------------------------ */
-    header {
-      background: var(--cream); /* ✅ solid */
-      text-align: center;
-      padding: 2.5rem 1rem 1.75rem;
-      border-bottom: 2px solid var(--sage);
-    }
-
-    .site-logo {
-      max-width: 160px;
-      border-radius: 14px;
-      border: 3px solid var(--forest-green);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-      margin-bottom: 1rem;
-      background: var(--paper);
-    }
-
-    header h1 {
-      font-family: var(--font-header);
-      font-size: 2.9rem;
-      margin: 0;
-    }
-
-    .tagline {
-      font-style: italic;
-      margin: 0.4rem 0 1.4rem;
-      color: var(--teal);
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--forest-green);
-      font-weight: bold;
-      padding: 0.55rem 0.8rem;
-      border-radius: 10px;
-      transition: 0.25s ease;
-    }
- nav a:hover {
-  background-color: var(--accent);
-  color: #fff;
-  transform: scale(1.04);
-}
-
-
-    /* ------------------------------
-       SECTIONS = PAPER CARDS
-    ------------------------------ */
-    section {
-      background: var(--paper);         /* ✅ white card */
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-      padding: 2.5rem 1.25rem;
-      max-width: 900px;
-      margin: 2rem auto;                /* ✅ spaced cards */
-    }
-h2 {
-  font-family: var(--font-header);
-  color: var(--forest-green);
-  padding-bottom: 0.4rem;
-  margin-top: 0;
-  border-bottom: 2px solid var(--accent);
-}
-
-
-    /* ------------------------------
-       HERO (SOLID, NO GRADIENT)
-    ------------------------------ */
-    #hero {
-      background: var(--peach);         /* ✅ solid peach */
-      border: 1px solid #e6c1a0;
-      box-shadow: var(--shadow);
-      text-align: center;
-      padding: 4rem 1.25rem 3.25rem;
-    }
-
-    .hero-title {
-      font-family: var(--font-header);
-      font-size: 2.5rem;
-      margin: 0 0 0.7rem;
-    }
-
-    .hero-subtitle {
-      max-width: 780px;
-      margin: 0 auto 1.8rem;
-      color: #2a2521;
-      font-size: 1.15rem;
-    }
-
-    .hero-cta {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-    }
-
-    .btn {
-      text-decoration: none;
-      padding: 0.8rem 1.4rem;
-      border-radius: 10px;
-      font-weight: 700;
-      display: inline-block;
-      transition: 0.2s ease;
-    }
-
-    .btn:hover {
-      transform: scale(1.04);
-      opacity: 0.96;
-    }
-
-.btn-primary {
-  background: var(--accent);
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background: var(--accent-dark);
-}
-
-.btn-secondary {
-  background: var(--paper);
-  border: 2px solid var(--accent);
-  color: var(--accent);
-}
-
-.btn-secondary:hover {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
-}
-
-
-    /* ------------------------------
-       ABOUT
-    ------------------------------ */
-    .about-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
-      margin-top: 1.5rem;
-    }
-
-    .about-photo {
-      width: 260px;
-      height: 260px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid var(--forest-green);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.10);
-      background: var(--paper);
-    }
-
-    .about-text {
-      flex: 1;
-      min-width: 260px;
-    }
-
-    /* ------------------------------
-       BLOG CARD
-    ------------------------------ */
-    #blog .blog-card {
-      background: var(--cream);
-      border: 2px solid var(--peach);
-      border-radius: 12px;
-      padding: 1.25rem;
-      margin-top: 1rem;
-    }
-
-    /* ------------------------------
-       OFFERINGS
-    ------------------------------ */
-    .offerings-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-      padding-left: 0;
-    }
-
-    .offerings-list li {
-      list-style: none;
-      background: var(--cream);
-      border: 2px solid var(--sage);
-      border-radius: 12px;
-      padding: 1.1rem;
-      transition: 0.2s ease;
-    }
-
-    .offerings-list li:hover {
-      transform: translateY(-4px);
-      border-color: var(--gold-ochre);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-    }
-
-    /* ------------------------------
-       CTA BOX (NO GRADIENT)
-    ------------------------------ */
-.cta-box a {
-  display: inline-block;
-  margin-top: 1.4rem;
-  padding: 0.75rem 1.5rem;
-  background: var(--accent);
-  color: #fff;
-  font-weight: bold;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: 0.2s ease;
-}
-.cta-box a:hover {
-  background: var(--accent-dark);
-  transform: scale(1.04);
-}
-
-
-    /* ------------------------------
-       PUBLICATIONS
-    ------------------------------ */
-    .pub-item {
-      background: var(--paper);
-      border: 2px solid var(--peach);
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: 0.2s ease;
-      margin-top: 1rem;
-    }
-
-    .pub-item:hover {
-      transform: translateY(-4px);
-      border-color: var(--forest-green);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-    }
-
-    .pub-link {
-      display: inline-block;
-      margin-top: 0.7rem;
-      padding: 0.5rem 1rem;
-      background: var(--forest-green);
-      color: #fff;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    /* ------------------------------
-       CONTACT
-    ------------------------------ */
-    .contact-card {
-      background: var(--cream);
-      border: 2px solid var(--sage);
-      border-radius: 12px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    /* ------------------------------
-       FOOTER (NO CARD — GROUNDS PAGE)
-    ------------------------------ */
-    footer.site-footer {
-      background: var(--forest-green);
-      color: var(--cream);
-      margin-top: 3rem;
-      padding: 3rem 1rem 2rem;
-      box-shadow: none;
-      border-radius: 0;
-      border: none;
-    }
-
-    .footer-container {
-      max-width: 1100px;
-      margin: 0 auto 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: space-between;
-    }
-
-    .footer-col {
-      flex: 1 1 260px;
-      min-width: 240px;
-    }
-
-    .site-footer h3,
-    .site-footer h4 {
-      font-family: var(--font-header);
-      color: var(--cream);
-      margin-top: 0;
-    }
-
-    .site-footer a {
-      color: var(--peach);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .site-footer a:hover {
-      color: var(--gold-ochre);
-      text-decoration: underline;
-    }
-
-    .footer-links {
-      list-style: none;
-      padding: 0;
-      margin: 0.6rem 0 0;
-    }
-
-    .footer-links li {
-      margin: 0.35rem 0;
-    }
-
-    .footer-btn {
-      background-color: var(--peach);
-      color: var(--forest-green);
-      border: 2px solid var(--peach);
-      padding: 0.75rem 1.3rem;
-      border-radius: 10px;
-      font-weight: 700;
-      display: inline-block;
-      transition: 0.25s ease;
-      text-decoration: none;
-    }
-
-    .footer-btn:hover {
-      background-color: var(--gold-ochre);
-      color: var(--forest-green);
-      border-color: var(--gold-ochre);
-      transform: scale(1.05);
-    }
-
-    .footer-bottom {
-      text-align: center;
-      font-size: 0.92rem;
-      opacity: 0.9;
-      border-top: 1px solid rgba(255,255,255,0.25);
-      padding-top: 1rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    /* Responsive */
-    @media (max-width: 700px) {
-      header h1 { font-size: 2.3rem; }
-      .hero-title { font-size: 2rem; }
-      .about-container { flex-direction: column; text-align: center; }
-      .about-photo { margin-bottom: 1rem; }
-      section { margin: 1.25rem 0.9rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <img src="logo1.png" alt="Triple Gem Herbs Logo" class="site-logo" />
-    <h1>Triple Gem Herbs</h1>
-    <p class="tagline">Science meets tradition in herbalism & botanical education</p>
-
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#offerings">Offerings</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="newsletter.html">Newsletter</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#instagram">Instagram</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- HEADER (loaded from partial) -->
+  <div id="site-header"></div>
 
   <!-- HERO -->
   <section id="hero">
@@ -518,23 +89,13 @@ h2 {
     </p>
 
     <div class="blog-card">
-      <p style="margin-top:0;">
+      <p class="mt-0">
         I write my Field Notes in Notion so I can publish quickly and keep them
         alive and evolving.
       </p>
+      <a class="btn btn-primary" href="https://triplegemherbs.thesimple.ink/" target="_blank" rel="noopener">Read the Field Notes →</a>
 
-      <a
-        class="btn btn-primary"
-        href="https://triplegemherbs.thesimple.ink/"
-        target="_blank"
-        rel="noopener"
-      >
-        Read the Field Notes →
-      </a>
-
-      <p style="margin-bottom:0; font-size:0.95rem; opacity:0.9;">
-        New posts appear there first.
-      </p>
+      <p class="mb-0 small muted">New posts appear there first.</p>
     </div>
   </section>
 
@@ -562,27 +123,21 @@ h2 {
 <section id="zine">
   <h2>Food as Medicine Zine</h2>
 
-  <div style="text-align:center; margin-top: 1rem;">
-    <a href="https://shop.beacons.ai/triplegemherbs/b6b7e6c7-570a-4bb5-85e5-ed9c13bcb980" target="_blank" rel="noopener">
-      <img
-        src="assets/food-as-medicine-zine.jpg"
-        alt="Food as Medicine zine cover"
-        style="width:100%; max-width:520px; height:auto; display:block; margin: 0 auto; border-radius: 12px; border: 2px solid var(--accent);"
-      >
+  <div class="text-center mt-1">
+    <a href="zine.html" title="Read the full zine page">
+      <img src="assets/food-as-medicine-zine.jpg" alt="Food as Medicine zine cover" class="zine-cover">
     </a>
   </div>
 
-  <p style="text-align:center; margin-top: 1rem;">
+  <p class="text-center mt-1">
     A food-as-medicine zine exploring everyday herbalism through plants, tradition,
     and practical kitchen wisdom.
   </p>
 
-  <div style="text-align:center; margin-top: 1rem;">
-    <a href="https://shop.beacons.ai/triplegemherbs/b6b7e6c7-570a-4bb5-85e5-ed9c13bcb980" target="_blank" rel="noopener" class="btn btn-secondary">
-      Read the Zine
-    </a>
+  <div class="text-center mt-1">
+    <a href="zine.html" class="btn btn-secondary">Read the Zine</a>
   </div>
-  </section>
+</section>
 
 
 
@@ -590,11 +145,11 @@ h2 {
   <section id="events">
     <h2>Upcoming Events</h2>
 
-    <p style="text-align:center; margin-top: 1.25rem;">
+    <p class="text-center mt-2">
       Want updates on workshops and plant walks? Join my email list:
     </p>
 
-    <div style="text-align:center;">
+    <div class="text-center">
       <a href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener" class="btn btn-secondary">
         Join the Email List
       </a>
@@ -646,56 +201,15 @@ h2 {
   <!-- INSTAGRAM -->
   <section id="instagram">
     <h2>From Instagram</h2>
-    <p style="text-align:center;">
-      <a href="https://www.instagram.com/triplegemherbs/" target="_blank" rel="noopener" style="color: var(--teal); font-weight:bold;">
-        → Follow me on Instagram
-      </a>
+    <p class="text-center">
+      <a href="https://www.instagram.com/triplegemherbs/" target="_blank" rel="noopener" class="text-teal font-bold">→ Follow me on Instagram</a>
     </p>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-container">
+  <!-- FOOTER (loaded from partial) -->
+  <div id="site-footer"></div>
 
-      <div class="footer-col">
-        <h3>Triple Gem Herbs</h3>
-        <p>
-          Herbal consulting & botanical education blending science and tradition.<br>
-          Based in Northern California • Serving clients everywhere.
-        </p>
-        <p style="margin-top: 1rem;">
-          <a href="#contact" class="footer-btn">Book a Consultation</a>
-        </p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <p>Instagram: <a href="https://instagram.com/triplegemherbs" target="_blank" rel="noopener">@triplegemherbs</a></p>
-        <p>Prefer email? Use the <a href="#contact">contact form</a>.</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#offerings">Offerings</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Free Tea Guide</a></li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      © <span id="year"></span> Triple Gem Herbs • All Rights Reserved<br>
-      Herbal information is for educational purposes only and not a substitute for medical advice.
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="assets/js/partials.js" defer></script>
 
 </body>
 </html>

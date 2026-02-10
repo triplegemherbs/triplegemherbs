@@ -1,0 +1,12 @@
+# Ignore screenshots directory (generated during local testing)
+screenshots/
+
+# macOS Finder
+.DS_Store
+
+# Python cache
+__pycache__/
+.pytest_cache/
+
+# Node
+node_modules/
