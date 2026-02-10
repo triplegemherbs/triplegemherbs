@@ -7,70 +7,16 @@
   <meta name="description" content="Seasonal newsletter archive from Triple Gem Herbs — where science and tradition meet. Read past issues and subscribe for the next one." />
 
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
-
   <meta property="og:title" content="Newsletter Archive • Triple Gem Herbs" />
   <meta property="og:description" content="Read past issues and subscribe to the Triple Gem Herbs seasonal newsletter." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-cover.jpg" />
 
-  <style>
-    :root{
-      --forest:#1e4d3a;
-      --peach:#f7d2b8;
-      --ink:#1b1b1b;
-      --stone:#f6f5f3;
-    }
-    html,body{margin:0;padding:0;font-family:"Lora",serif;color:var(--ink);background:var(--stone);}
-    a{color:var(--forest);text-decoration:underline;text-underline-offset:2px;}
-    .container{width:min(1000px,92vw);margin:0 auto;}
-
-    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-bottom:1px solid #e7e4df;}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px;}
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;}
-    .brand-mark{width:40px;height:40px;border-radius:12px;background:var(--forest);display:grid;place-items:center;color:#fff;font-family:"Special Elite",serif;font-size:18px;letter-spacing:.5px;}
-    .brand h1{font-family:"Special Elite",serif;font-size:18px;margin:0;letter-spacing:.5px;}
-    .nav-links{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;}
-    .btn{display:inline-block;padding:10px 14px;border-radius:14px;border:1px solid var(--forest);color:var(--forest);text-decoration:none;font-weight:700;}
-    .btn.fill{background:var(--forest);color:#fff;border-color:var(--forest);}
-
-    .hero{padding:46px 0 18px;}
-    .eyebrow{display:inline-block;background:var(--peach);color:#532b12;font-weight:800;padding:6px 10px;border-radius:999px;letter-spacing:.3px;}
-    .hero h2{font-family:"Special Elite",serif;font-size:clamp(28px,5vw,44px);line-height:1.1;margin:14px 0 10px;}
-    .hero p{font-size:clamp(16px,2.5vw,18px);margin:0;max-width:70ch;color:#333;}
-
-    .subscribe{background:linear-gradient(135deg,var(--peach),#ffe9db);border:1px solid #f7dcca;border-radius:20px;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
-    .subscribe h4{margin:0;font-size:20px;}
-    .subscribe p{margin:6px 0 0;color:#3b2a1c;}
-    .subscribe .copy{max-width:70ch}
-
-    .archive{padding:20px 0 70px;display:grid;gap:14px;}
-    .card{background:#fff;border:1px solid #ece8e2;border-radius:18px;padding:16px 18px;}
-    .meta-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;}
-    .meta time{font-size:12px;color:#666;letter-spacing:.3px;text-transform:uppercase;}
-    .meta h3{margin:10px 0 6px;font-size:22px;line-height:1.2;}
-    .meta p{margin:0;color:#444;max-width:80ch;}
-    .chips{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px;}
-    .chip{font-size:12px;background:#f3f0ec;color:#5a4d42;border-radius:999px;padding:4px 10px;border:1px solid #e8e2da;}
-    .actions{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;}
-
-    footer{border-top:1px solid #e7e4df;padding:30px 0 50px;font-size:14px;color:#4a4a4a;}
-  </style>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-  <header>
-    <div class="container nav">
-      <a href="index.html" class="brand" aria-label="Back to home">
-        <div class="brand-mark">TGH</div>
-        <h1>Triple Gem Herbs</h1>
-      </a>
-      <nav class="nav-links" aria-label="Site">
-        <a class="btn" href="index.html#offerings">Offerings</a>
-        <a class="btn" href="index.html#contact">Contact</a>
-        <a class="btn fill" href="#subscribe">Subscribe</a>
-      </nav>
-    </div>
-  </header>
+  <div id="site-header"></div>
 
   <main class="container">
     <section class="hero" aria-labelledby="archive-heading">
@@ -137,20 +83,7 @@
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p><strong>Triple Gem Herbs</strong> — herbal consulting & botanical education. Northern California.</p>
-      <p>
-        <a href="https://instagram.com/triplegemherbs" target="_blank" rel="noopener">Instagram</a> ·
-        <a href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener">Beacons</a> ·
-        <a href="index.html#contact">Contact</a>
-      </p>
-      <p style="opacity:.8">© <span id="year"></span> Triple Gem Herbs. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <div id="site-footer"></div>
+  <script src="assets/js/partials.js" defer></script>
 </body>
 </html>
