@@ -43,6 +43,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/forms.css">
 </head>
 
 <body>
@@ -186,11 +187,37 @@
   <!-- CONTACT -->
   <section id="contact">
     <h2>Contact</h2>
-
     <div class="contact-card">
       <p><strong>Reach out:</strong> Use the form below or DM me on Instagram</p>
       <p><strong>Instagram:</strong> <a href="https://www.instagram.com/triplegemherbs" target="_blank" rel="noopener">@triplegemherbs</a></p>
       <p><strong>Location:</strong> Northern California • Serving clients everywhere</p>
+
+      <!-- Local contact form (submits to Formspree by default) -->
+      <form class="protected-form" method="POST" action="https://formspree.io/f/your-form-id">
+        <div>
+          <label for="name">Name</label><br>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+        </div>
+        <div>
+          <label for="email">Email</label><br>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        </div>
+        <div>
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or question" required></textarea>
+        </div>
+
+        <!-- Honeypot field: should remain empty. Bots often fill it. -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="hp_address">Leave this field empty</label>
+          <input id="hp_address" name="hp_address" type="text" autocomplete="off">
+        </div>
+
+        <p class="form-note">Or use the embedded Google Form below for longer requests.</p>
+        <div style="margin-top:8px;">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
     </div>
 
     <iframe
@@ -210,6 +237,7 @@
   <div id="site-footer"></div>
 
   <script src="assets/js/partials.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
 
 </body>
 </html>
