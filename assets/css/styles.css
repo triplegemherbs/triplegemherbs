@@ -1,12 +1,12 @@
 /* Color System */
 :root {
-  --primary: #39524c;
-  --primary-dark: #53796f;
-  --accent: #fed4b7;
-  --accent-light: #96bc9e;
-  --accent-pop: #4a2349;
+  --primary: #52796e;
+  --primary-dark: #c06a6a;
+  --accent: #ffa384;
+  --accent-light: #b8c026;
+  --accent-pop: #c06a6a;
   --bg: #f6eae3;
-  --text: #53796f;
+  --text: #52796e;
   --text-light: #7a8f88;
   --border: #e8dfd5;
   --white: #ffffff;
@@ -20,7 +20,7 @@
 }
 
 html, body {
-  font-family: "Lora", serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 16px;
   line-height: 1.6;
   color: var(--text);
@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  background: linear-gradient(90deg, var(--primary-dark) 0%, var(--accent-pop) 100%);
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -88,7 +88,7 @@ header h1 {
 }
 
 header p.tagline {
-  font-style: italic;
+  font-family: "Beth Ellen", cursive;
   color: var(--text-light);
   margin-bottom: 2rem;
 }
