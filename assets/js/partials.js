@@ -55,7 +55,12 @@
   }
 
   document.addEventListener('DOMContentLoaded', function(){
-    loadPartial('site-header','/partials/header.html');
-    loadPartial('site-footer','/partials/footer.html');
+    // Determine the correct path to partials based on current page location
+    var scriptPath = document.currentScript ? document.currentScript.src : '';
+    var isRootPage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
+    var partialsPath = isRootPage ? 'partials/' : '../partials/';
+    
+    loadPartial('site-header', partialsPath + 'header.html');
+    loadPartial('site-footer', partialsPath + 'footer.html');
   });
 })();
