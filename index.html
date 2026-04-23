@@ -30,7 +30,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Triple Gem Herbs",
-    "image": "logo1.png",
+    "image": "assets/greenlogo.png",
     "url": "https://triplegemherbs.com",
     "description": "Herbal consulting, plant walks, and botanical education blending science and tradition.",
     "email": "triplegemherbs@gmail.com",
@@ -40,7 +40,7 @@
   </script>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Special+Elite&family=Beth+Ellen&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -52,15 +52,36 @@
 
   <!-- HERO -->
   <section id="hero">
-    <h1 class="hero-title">Herbal Wisdom Rooted in Science</h1>
+    <h1 class="hero-title">Herbal guidance for people who want a grounded, science-informed relationship with plants</h1>
     <p class="hero-subtitle">
-      Consultations, workshops, and botanical education to help you reconnect
-      with nature’s healing intelligence and your body’s innate balance.
+      Consultations, plant walks, and botanical education for curious people who want herbalism to feel clear, practical, and connected to place.
     </p>
 
     <div class="hero-cta">
-      <a id="bookConsultBtn" href="#contact" class="btn btn-primary">Book a Consultation</a>
-      <a href="https://beacons.ai/triplegemherbs" target="_blank" class="btn btn-secondary" rel="noopener">Download the Tea Guide</a>
+      <a id="bookConsultBtn" href="#contact" class="btn btn-primary">Book a free intro call</a>
+      <a href="https://beacons.ai/triplegemherbs" target="_blank" class="btn btn-secondary" rel="noopener">Download the tea guide</a>
+    </div>
+  </section>
+
+  <!-- START HERE -->
+  <section id="start-here">
+    <h2>Start Here</h2>
+    <div class="start-options">
+      <div class="start-item">
+        <h3>Want personalized support?</h3>
+        <p>Book a consultation.</p>
+        <a href="#contact" class="btn btn-primary">Book a free intro call</a>
+      </div>
+      <div class="start-item">
+        <h3>Want to learn with me?</h3>
+        <p>Explore classes and workshops.</p>
+        <a href="#offerings" class="btn btn-secondary">See learning opportunities</a>
+      </div>
+      <div class="start-item">
+        <h3>Want a gentle introduction?</h3>
+        <p>Download the tea guide.</p>
+        <a href="https://beacons.ai/triplegemherbs" target="_blank" class="btn btn-secondary" rel="noopener">Download the guide</a>
+      </div>
     </div>
   </section>
 
@@ -73,41 +94,62 @@
 
       <div class="about-text">
         <p>
-          Jasmine Zenderland is a botanist, educator, and herbalist blending scientific rigor with traditional plant knowledge. Through Triple Gem Herbs, she offers herbal consulting, seasonal plant walks, and educational programs designed to support personal empowerment and a deeper connection to the natural world.
+          I'm Jasmine Zenderland, a botanist, educator, and herbalist. My work blends botanical science with traditional plant knowledge to help people build a more confident, connected relationship with herbs. Through consultations, classes, and field-based learning, I help make herbalism feel both rigorous and approachable.
         </p>
       </div>
-    </div>
-  </section>
-
-  <!-- BLOG -->
-  <section id="blog">
-    <h2>Field Notes</h2>
-
-    <p>
-      Longer-form writing from the field—botany, herbalism, restoration work,
-      and reflections from the redwood forests.
-    </p>
-
-    <div class="blog-card">
-      <p class="mt-0">
-        I write my Field Notes in Notion so I can publish quickly and keep them
-        alive and evolving.
-      </p>
-      <a class="btn btn-primary" href="https://triplegemherbs.thesimple.ink/" target="_blank" rel="noopener">Read the Field Notes →</a>
-
-      <p class="mb-0 small muted">New posts appear there first.</p>
     </div>
   </section>
 
   <!-- OFFERINGS -->
   <section id="offerings">
     <h2>Offerings</h2>
-    <ul class="offerings-list">
-      <li><strong>Consultations:</strong> Personalized herbal guidance</li>
-      <li><strong>Workshops:</strong> Online & in-person learning</li>
-      <li><strong>Plant Walks:</strong> Seasonal ID & foraging</li>
-      <li><strong>Custom Experiences:</strong> Private herbal events & classes</li>
-    </ul>
+    <div class="offerings-cards">
+      <div class="offering-card">
+        <h3>1:1 Herbal Consultations</h3>
+        <p>For people who want personalized support and a clearer path with herbs.</p>
+        <p>Get practical, thoughtful guidance rooted in both traditional use and plant science.</p>
+        <a href="#contact" class="btn btn-primary">Inquire about consultations</a>
+      </div>
+      <div class="offering-card">
+        <h3>Workshops & Classes</h3>
+        <p>For groups, students, and curious learners who want real botanical understanding.</p>
+        <p>Topics may include herbal foundations, plant ID, medicine making, and place-based learning.</p>
+        <a href="#events" class="btn btn-secondary">See learning opportunities</a>
+      </div>
+      <div class="offering-card">
+        <h3>Plant Walks & Private Experiences</h3>
+        <p>For visitors, small groups, or locals who want to meet plants in the field.</p>
+        <p>Guided experiences centered on medicinal plants, ecology, and sensory connection to place.</p>
+        <a href="#contact" class="btn btn-secondary">Ask about a private walk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>Publications & Features</h2>
+    <p>Jasmine’s work has been featured in scientific journals, policy briefs, and educational platforms.</p>
+
+    <article class="pub-item">
+      <h3>Food as Medicine: Lion’s Mane (<em>Hericium erinaceus</em>)</h3>
+      <p><em>HerbalEGram</em>, American Botanical Council — September 2024</p>
+      <p>Co-authored feature exploring traditional uses, modern research, and culinary applications of lion’s mane mushroom.</p>
+      <a href="https://www.herbalgram.org/resources/herbalegram/volumes/volume-21/issue-9-september/news-and-features-3-1/fam-lions-mane/" target="_blank" class="pub-link" rel="noopener">Read Article →</a>
+    </article>
+
+    <article class="pub-item">
+      <h3>The Use of “Use Value”: Quantifying Importance in Ethnobotany</h3>
+      <p><em>Economic Botany</em> (Springer) — October 2019</p>
+      <p>Peer-reviewed study examining how “use value” varies between cultivated and wild plants across ethnobotanical datasets.</p>
+      <a href="https://link.springer.com/article/10.1007/s12231-019-09480-1" target="_blank" class="pub-link" rel="noopener">Read Article →</a>
+    </article>
+
+    <article class="pub-item">
+      <h3>Herbal Supplements and Consumer Safety</h3>
+      <p>MOST Policy Initiative / AAAS — August 2023</p>
+      <p>Community science note on regulation, safety challenges, and consumer considerations of herbal supplements in Missouri.</p>
+      <a href="https://mostpolicyinitiative.org/wp-content/uploads/2023/12/Most-Note-Herbal-Supplements-9_25_23.pdf" target="_blank" class="pub-link" rel="noopener">Read Brief →</a>
+    </article>
   </section>
 
   <!-- FREE GUIDE -->
@@ -156,39 +198,12 @@
     </div>
   </section>
 
-  <!-- PUBLICATIONS -->
-  <section id="publications">
-    <h2>Publications & Features</h2>
-    <p>Jasmine’s work has been featured in scientific journals, policy briefs, and educational platforms.</p>
-
-    <article class="pub-item">
-      <h3>Food as Medicine: Lion’s Mane (<em>Hericium erinaceus</em>)</h3>
-      <p><em>HerbalEGram</em>, American Botanical Council — September 2024</p>
-      <p>Co-authored feature exploring traditional uses, modern research, and culinary applications of lion’s mane mushroom.</p>
-      <a href="https://www.herbalgram.org/resources/herbalegram/volumes/volume-21/issue-9-september/news-and-features-3-1/fam-lions-mane/" target="_blank" class="pub-link" rel="noopener">Read Article →</a>
-    </article>
-
-    <article class="pub-item">
-      <h3>The Use of “Use Value”: Quantifying Importance in Ethnobotany</h3>
-      <p><em>Economic Botany</em> (Springer) — October 2019</p>
-      <p>Peer-reviewed study examining how “use value” varies between cultivated and wild plants across ethnobotanical datasets.</p>
-      <a href="https://link.springer.com/article/10.1007/s12231-019-09480-1" target="_blank" class="pub-link" rel="noopener">Read Article →</a>
-    </article>
-
-    <article class="pub-item">
-      <h3>Herbal Supplements and Consumer Safety</h3>
-      <p>MOST Policy Initiative / AAAS — August 2023</p>
-      <p>Community science note on regulation, safety challenges, and consumer considerations of herbal supplements in Missouri.</p>
-      <a href="https://mostpolicyinitiative.org/wp-content/uploads/2023/12/Most-Note-Herbal-Supplements-9_25_23.pdf" target="_blank" class="pub-link" rel="noopener">Read Brief →</a>
-    </article>
-  </section>
-
   <!-- CONTACT -->
   <section id="contact">
-    <h2>Contact</h2>
+    <h2>Work with me</h2>
 
     <div class="contact-card">
-      <p><strong>Reach out:</strong> Use the form below or DM me on Instagram</p>
+      <p>Use the contact form for consultations, classes, collaborations, or private events. I reply within 2–3 business days.</p>
       <p><strong>Instagram:</strong> <a href="https://www.instagram.com/triplegemherbs" target="_blank" rel="noopener">@triplegemherbs</a></p>
       <p><strong>Location:</strong> Northern California • Serving clients everywhere</p>
     </div>
