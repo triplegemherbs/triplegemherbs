@@ -55,7 +55,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', function(){
-    loadPartial('site-header','/partials/header.html');
-    loadPartial('site-footer','/partials/footer.html');
+    loadPartial('site-header','partials/header.html');
+    loadPartial('site-footer','partials/footer.html');
   });
 })();
