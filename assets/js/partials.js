@@ -20,7 +20,7 @@
   function initFooter(){
     // Obfuscate emails
     var emailEl = document.getElementById('email-obfuscated');
-    if(emailEl) emailEl.innerHTML = '<a href="mailto:jasmine@triplegemherbs.com">jasmine@triplegemherbs.com</a>';
+    if(emailEl) emailEl.innerHTML = '<a href="mailto:triplegemherbs@gmail.com">triplegemherbs@gmail.com</a>';
     
     var businessEmailEl = document.getElementById('business-email-obfuscated');
     if(businessEmailEl) businessEmailEl.innerHTML = '<a href="mailto:triplegemherbs@gmail.com">triplegemherbs@gmail.com</a>';
