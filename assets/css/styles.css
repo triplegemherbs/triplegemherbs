@@ -327,6 +327,34 @@ section > p:first-of-type {
   color: var(--text);
 }
 
+/* Mission Section */
+#mission {
+  background: linear-gradient(135deg, rgba(180, 192, 38, 0.05), rgba(160, 106, 106, 0.05));
+  text-align: center;
+}
+
+#mission p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mission p:last-child {
+  margin-bottom: 0;
+}
+
+/* Section Description */
+.section-description {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
 /* Start Here Section */
 .start-options {
   display: grid;
