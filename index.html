@@ -102,10 +102,24 @@
     </div>
   </section>
 
+  <!-- BEHOLD FEED WIDGET -->
+  <section id="behold-feed" class="site-feed">
+    <h2>See what's brewing on Instagram</h2>
+    <div class="site-feed-wrapper">
+      <behold-widget feed-id="melC7XGISDlBLoRu5w8g"></behold-widget>
+    </div>
+  </section>
+
   <!-- FOOTER (loaded from partial) -->
   <div id="site-footer"></div>
 
   <script src="assets/js/partials.js" defer></script>
+  <script>
+    (() => {
+      const d=document,s=d.createElement("script");s.type="module";
+      s.src="https://w.behold.so/widget.js";d.head.append(s);
+    })();
+  </script>
 
 </body>
 </html>

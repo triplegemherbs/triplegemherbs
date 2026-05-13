@@ -355,6 +355,33 @@ section > p:first-of-type {
   font-style: italic;
 }
 
+.site-feed {
+  margin-top: 3rem;
+  background: #fbf6f2;
+  border: 1px solid rgba(147, 128, 111, 0.18);
+  border-radius: 24px;
+  padding: 3rem 1.5rem;
+  box-shadow: 0 18px 50px rgba(57, 82, 76, 0.08);
+}
+
+.site-feed h2 {
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.site-feed-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .site-feed {
+    padding: 2rem 1rem;
+  }
+}
+
 /* Start Here Section */
 .start-options {
   display: grid;
