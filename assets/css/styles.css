@@ -424,7 +424,8 @@ section > p:first-of-type {
 
 .gallery-photo {
   width: 100%;
-  height: auto;
+  height: 280px;
+  object-fit: cover;
   border-radius: 12px;
   transition: transform 0.3s ease;
 }
@@ -434,6 +435,10 @@ section > p:first-of-type {
 }
 
 @media (max-width: 768px) {
+  .gallery-photo {
+    height: 220px;
+  }
+
   .about-container {
     grid-template-columns: 1fr;
   }
