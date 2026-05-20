@@ -358,13 +358,14 @@ section h2 {
   background: var(--olive);
   min-height: 90vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 6rem 2.5rem 10rem;
+  align-items: center;
+  gap: 3rem;
+  justify-content: space-between;
+  padding: 4rem 2rem 8rem;
   overflow: hidden;
-  /* kill old gradient */
   background-image: none;
   text-align: left;
+  position: relative;
 }
 
 #hero::after {
@@ -374,6 +375,25 @@ section h2 {
   height: 120px;
   background: var(--peach);
   clip-path: ellipse(58% 100% at 48% 100%);
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 0 0 340px;
+}
+
+.hero-image img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center top;
+  border: 4px solid var(--teal);
+  display: block;
 }
 
 .hero-gem {
@@ -1083,14 +1103,46 @@ footer.site-footer::before,
 
   header, .site-header { padding: 0 1.25rem; }
 
-  #hero { padding: 4rem 1.25rem 8rem; min-height: 80vh; }
+  #hero { padding: 4rem 1.25rem 8rem; min-height: 80vh; flex-direction: column-reverse; text-align: center; }
   .hero-gem { display: none; }
+
+  .hero-image { flex: 0 0 200px; width: 200px; margin: 0 auto; }
 
   #about .section-inner,
   #about .about-container { grid-template-columns: 1fr; gap: 2rem; }
 
-  .photo-gallery { grid-template-columns: repeat(2, 1fr); }
-  .gallery-photo:first-child { grid-column: span 2; }
+  .photo-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 1rem;
+  }
+
+  .photo-gallery::-webkit-scrollbar {
+    height: 10px;
+  }
+  .photo-gallery::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+  }
+  .photo-gallery::-webkit-scrollbar-thumb {
+    background: rgba(59,47,39,0.3);
+    border-radius: 999px;
+  }
+
+  .gallery-photo {
+    min-width: min(84vw, 420px);
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border-radius: 8px;
+  }
+
+  .gallery-photo:first-child {
+    min-width: min(88vw, 520px);
+    aspect-ratio: 16/9;
+  }
 
   .footer-container { grid-template-columns: 1fr; gap: 2rem; }
 
@@ -1100,7 +1152,7 @@ footer.site-footer::before,
 }
 
 @media (max-width: 480px) {
-  .photo-gallery { grid-template-columns: 1fr; }
-  .gallery-photo:first-child { grid-column: span 1; aspect-ratio: 4/3; }
+  .gallery-photo { min-width: min(92vw, 360px); }
+  .photo-gallery { gap: 0.85rem; }
   h2 { font-size: 1.75rem; }
 }
