@@ -770,8 +770,9 @@ section h2 {
 /* ── INSTAGRAM — dark ─────────────────────────────────────── */
 #behold-feed,
 .site-feed {
+  position: relative;
   background: var(--dark);
-  padding: 5rem 2.5rem 6rem;
+  padding: 8rem 2.5rem 6rem;
   overflow: hidden;
   border: none;
   border-radius: 0;
@@ -1390,13 +1391,17 @@ section h2 {
 }
 
 /* ── FOOTER ───────────────────────────────────────────────── */
-footer.site-footer,
-#site-footer {
+footer.site-footer {
   background: var(--cream);
   color: var(--dark);
-  padding: 4rem 2.5rem 2rem;
+  padding: 3rem 2.5rem 2rem;
   border-top: 2px solid var(--border);
   margin-top: 0;
+}
+
+#site-footer {
+  background: var(--cream);
+  border-top: 2px solid var(--border);
 }
 
 footer.site-footer::before,
@@ -1404,7 +1409,7 @@ footer.site-footer::before,
 
 .footer-logo-wrap {
   text-align: center;
-  padding: 2.5rem 2.5rem 0;
+  padding: 0 2.5rem 2rem;
 }
 
 .footer-logo {
