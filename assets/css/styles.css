@@ -1167,6 +1167,11 @@ footer.site-footer::before,
     margin: 0 auto 1.5rem;
   }
 
+  .hero-image img {
+    max-width: 160px;
+    height: 160px;
+  }
+
   .site-nav {
     display: none;
     width: 100%;
