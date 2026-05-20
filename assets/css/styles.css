@@ -259,6 +259,13 @@ nav a.active {
 }
 .btn-accent-pop:hover { background: var(--dark); border-color: var(--dark); color: var(--cream); }
 
+.btn-olive {
+  background: var(--olive);
+  color: var(--dark);
+  border-color: var(--olive);
+}
+.btn-olive:hover { background: var(--teal); border-color: var(--teal); color: var(--cream); }
+
 /* ── SECTION BASE ─────────────────────────────────────────── */
 section {
   padding: 5rem 2.5rem;
