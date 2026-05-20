@@ -678,6 +678,15 @@ section h2 {
 .about-text .section-label { color: rgba(246,234,227,0.7); }
 .about-text h2 { color: var(--cream); -webkit-text-fill-color: var(--cream); }
 .about-text p  { color: rgba(246,234,227,0.9); font-size: 1rem; margin-bottom: 1rem; }
+.about-brand-logo {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 2rem;
+  display: block;
+}
+
 .about-text a  {
   color: var(--cream);
   text-decoration: none;
@@ -1098,6 +1107,22 @@ footer.site-footer,
 
 footer.site-footer::before,
 #site-footer::before { display: none; }
+
+.footer-logo-wrap {
+  text-align: center;
+  padding: 2.5rem 2.5rem 0;
+}
+
+.footer-logo {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  opacity: 0.92;
+  transition: opacity 0.2s;
+}
+
+.footer-logo:hover { opacity: 1; }
 
 .footer-container {
   max-width: 1080px;
