@@ -24,9 +24,12 @@
     <section class="page-content">
       <div class="section-inner text-center">
         <p>Want updates on workshops and plant walks? Join my email list:</p>
-        <div class="mt-2">
-          <a href="https://beacons.ai/triplegemherbs" target="_blank" rel="noopener" class="btn btn-primary">Join the Email List</a>
-        </div>
+        <form action="https://formspree.io/f/mqewgggk" method="POST" class="newsletter-form" style="margin: 1.5rem auto 0; max-width: 400px; text-align: left;">
+          <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
+          <input type="text" name="_gotcha" style="display:none" aria-hidden="true">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <div class="form-message" style="display:none; margin-top:1rem;"></div>
       </div>
     </section>
   </main>

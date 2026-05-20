@@ -338,6 +338,10 @@ section h2 {
   color: var(--dark);
 }
 
+.subscribe--form {
+  grid-template-columns: 1fr;
+}
+
 .archive {
   display: grid;
   gap: 1.5rem;

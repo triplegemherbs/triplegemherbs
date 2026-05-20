@@ -20,51 +20,58 @@
     if(y) y.textContent = new Date().getFullYear();
   }
 
+  function initNewsletterForms() {
+    document.querySelectorAll('.newsletter-form').forEach(function(form) {
+      if(form.dataset.nsInit) return;
+      form.dataset.nsInit = '1';
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var messageDiv = form.nextElementSibling;
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+          if(response.ok) {
+            if(messageDiv) {
+              messageDiv.innerHTML = '<p style="color: var(--teal);">Thanks for subscribing!</p>';
+              messageDiv.style.display = 'block';
+            }
+            form.reset();
+          } else {
+            if(messageDiv) {
+              messageDiv.innerHTML = '<p style="color: red;">Oops! Something went wrong. Please try again.</p>';
+              messageDiv.style.display = 'block';
+            }
+          }
+        }).catch(function() {
+          if(messageDiv) {
+            messageDiv.innerHTML = '<p style="color: red;">Network error. Please try again later.</p>';
+            messageDiv.style.display = 'block';
+          }
+        });
+      });
+    });
+  }
+
   function initFooter(){
     // Obfuscate emails
     var emailEl = document.getElementById('email-obfuscated');
     if(emailEl) emailEl.innerHTML = '<a href="mailto:triplegemherbs@gmail.com">triplegemherbs@gmail.com</a>';
-    
+
     var businessEmailEl = document.getElementById('business-email-obfuscated');
     if(businessEmailEl) businessEmailEl.innerHTML = '<a href="mailto:triplegemherbs@gmail.com">triplegemherbs@gmail.com</a>';
-    
-    // Handle form submission
-    var form = document.getElementById('newsletter-form');
-    if(form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        var messageDiv = document.getElementById('form-message');
-        fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: {
-            'Accept': 'application/json'
-          }
-        }).then(function(response) {
-          if(response.ok) {
-            messageDiv.innerHTML = '<p style="color: var(--accent);">Thanks for subscribing! Check your email for confirmation.</p>';
-            messageDiv.style.display = 'block';
-            form.reset();
-          } else {
-            messageDiv.innerHTML = '<p style="color: red;">Oops! Something went wrong. Please try again.</p>';
-            messageDiv.style.display = 'block';
-          }
-        }).catch(function(error) {
-          messageDiv.innerHTML = '<p style="color: red;">Network error. Please try again later.</p>';
-          messageDiv.style.display = 'block';
-        });
-      });
-    }
+
+    initNewsletterForms();
   }
 
   document.addEventListener('DOMContentLoaded', function(){
-    // Determine the correct path to partials based on current page location
-    var scriptPath = document.currentScript ? document.currentScript.src : '';
     var isRootPage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
     var partialsPath = isRootPage ? 'partials/' : '../partials/';
-    
+
     loadPartial('site-header', partialsPath + 'header.html');
     loadPartial('site-footer', partialsPath + 'footer.html');
+    initNewsletterForms();
   });
 
   function initHeader() {
