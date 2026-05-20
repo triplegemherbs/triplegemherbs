@@ -72,6 +72,15 @@
     var nav = document.querySelector('.site-nav');
     if (!toggle || !nav) return;
 
+    // Mark active nav link based on current path
+    var path = window.location.pathname;
+    nav.querySelectorAll('a[href]').forEach(function(link) {
+      var href = link.getAttribute('href');
+      if (href && !href.startsWith('http') && path.endsWith(href.replace(/^\//, ''))) {
+        link.classList.add('active');
+      }
+    });
+
     function setOpen(isOpen) {
       nav.classList.toggle('open', isOpen);
       toggle.classList.toggle('open', isOpen);

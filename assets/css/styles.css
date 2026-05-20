@@ -182,6 +182,11 @@ nav a:hover {
   border-bottom-color: var(--peach);
 }
 
+nav a.active {
+  color: var(--peach);
+  border-bottom-color: var(--peach);
+}
+
 /* ── BUTTONS ──────────────────────────────────────────────── */
 .btn {
   display: inline-block;
