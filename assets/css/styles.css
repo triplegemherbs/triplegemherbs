@@ -26,6 +26,18 @@
   --white:          #ffffff;
 }
 
+/* ── PAPER GRAIN TEXTURE ──────────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  opacity: 0.035;
+}
+
 /* ── RESET & BASE ─────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -487,13 +499,13 @@ section h2 {
 }
 
 .hero-eyebrow {
-  font-family: 'Special Elite', cursive;
-  font-size: 13px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-family: 'Beth Ellen', cursive;
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
+  text-transform: none;
   color: var(--dark);
-  opacity: 0.7;
-  margin-bottom: 1.25rem;
+  opacity: 0.75;
+  margin-bottom: 1rem;
   display: block;
 }
 
@@ -512,6 +524,7 @@ section h2 {
 }
 
 .hero-title em {
+  font-family: 'Beth Ellen', cursive;
   font-style: normal;
   color: var(--rose);
   -webkit-text-fill-color: var(--rose);
@@ -582,7 +595,7 @@ section h2 {
 /* ── TESTIMONIAL — cream ──────────────────────────────────── */
 #testimonial {
   background: var(--cream);
-  padding: 5rem 2.5rem 6rem;
+  padding: 6rem 2.5rem 7rem;
 }
 
 #testimonial .section-inner {
@@ -593,30 +606,25 @@ section h2 {
 }
 
 .testimonial-mark {
-  font-family: 'Beth Ellen', cursive;
-  font-size: 8rem;
-  line-height: 0.6;
-  color: var(--rose);
-  margin-bottom: 1rem;
-  display: block;
+  display: none;
 }
 
 .testimonial-text {
-  font-family: 'Libre Baskerville', Georgia, serif;
-  font-size: clamp(1.05rem, 2vw, 1.35rem);
-  line-height: 1.8;
+  font-family: 'Beth Ellen', cursive;
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  line-height: 1.7;
   color: var(--dark);
-  max-width: 760px;
-  font-style: italic;
-  margin-bottom: 1.5rem;
+  max-width: 780px;
+  font-style: normal;
+  margin-bottom: 2rem;
 }
 
 .testimonial-attr {
   font-family: 'Special Elite', cursive;
-  font-size: 13px;
-  letter-spacing: 0.12em;
+  font-size: 12px;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--mid);
 }
 
 /* ── ABOUT — rose ─────────────────────────────────────────── */
