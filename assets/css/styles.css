@@ -900,32 +900,41 @@ section h2 {
 }
 
 /* ── OFFERINGS PAGE ───────────────────────────────────────────── */
-#start-here {
+#consult-hero {
   background: var(--olive);
   padding: 5rem 2.5rem 7rem;
   position: relative;
   overflow: hidden;
 }
 
-#start-here::after {
+#consult-hero::after {
   content: '';
   position: absolute;
   bottom: -2px; left: 0; right: 0;
   height: 100px;
-  background: var(--peach);
+  background: var(--cream);
   clip-path: ellipse(55% 100% at 52% 100%);
 }
 
-#start-here .section-inner { position: relative; z-index: 1; }
+#consult-hero .section-inner { position: relative; z-index: 1; }
 
-#offerings {
+#consult-hero h2 {
+  max-width: 680px;
+}
+
+#consult-hero p {
+  max-width: 600px;
+  color: rgba(59,47,39,0.85);
+}
+
+#more-offerings {
   background: var(--peach);
-  padding: 6rem 2.5rem 5rem;
+  padding: 6rem 2.5rem 7rem;
   position: relative;
   overflow: hidden;
 }
 
-#offerings::after {
+#more-offerings::after {
   content: '';
   position: absolute;
   bottom: -2px; left: 0; right: 0;
@@ -934,7 +943,11 @@ section h2 {
   clip-path: ellipse(55% 100% at 48% 100%);
 }
 
-#offerings .section-inner { position: relative; z-index: 1; }
+#more-offerings .section-inner { position: relative; z-index: 1; }
+
+.offerings-cards--two {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 
 /* ── SESSION DETAILS ──────────────────────────────────────── */
 #session-details {
