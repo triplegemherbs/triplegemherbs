@@ -76,7 +76,8 @@ a:hover { color: var(--rose); }
 /* ── HEADER / NAV ─────────────────────────────────────────── */
 header,
 .site-header {
-  background: var(--dark);
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
   padding: 0 2.5rem;
   height: 60px;
   display: flex;
@@ -85,8 +86,6 @@ header,
   position: sticky;
   top: 0;
   z-index: 100;
-  /* kill old styles */
-  border-bottom: none;
   text-align: left;
 }
 
@@ -108,8 +107,8 @@ header h1,
 .site-header h1 {
   font-size: 1.1rem;
   margin: 0;
-  color: var(--cream);
-  -webkit-text-fill-color: var(--cream);
+  color: var(--dark);
+  -webkit-text-fill-color: var(--dark);
 }
 
 header p.tagline { display: none; }
@@ -138,7 +137,7 @@ nav ul {
   border: none;
   padding: 0.5rem;
   cursor: pointer;
-  color: var(--cream);
+  color: var(--dark);
   align-items: center;
   justify-content: center;
 }
@@ -148,7 +147,7 @@ nav ul {
   width: 24px;
   height: 2px;
   margin: 5px 0;
-  background: var(--cream);
+  background: var(--dark);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -165,7 +164,7 @@ nav ul {
 }
 
 nav a {
-  color: var(--cream);
+  color: var(--dark);
   text-decoration: none;
   font-family: 'Special Elite', cursive;
   font-size: 14px;
@@ -178,13 +177,13 @@ nav a {
 nav a::after { display: none; }
 
 nav a:hover {
-  color: var(--peach);
-  border-bottom-color: var(--peach);
+  color: var(--teal);
+  border-bottom-color: var(--teal);
 }
 
 nav a.active {
-  color: var(--peach);
-  border-bottom-color: var(--peach);
+  color: var(--rose);
+  border-bottom-color: var(--rose);
 }
 
 /* ── BUTTONS ──────────────────────────────────────────────── */
@@ -1184,6 +1183,9 @@ footer.site-footer::before,
 
   .site-nav.open {
     display: block;
+    background: var(--cream);
+    border-top: 1px solid var(--border);
+    padding: 0.5rem 0;
   }
 
   .site-nav ul {
