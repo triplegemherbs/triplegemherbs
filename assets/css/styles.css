@@ -936,6 +936,174 @@ section h2 {
 
 #offerings .section-inner { position: relative; z-index: 1; }
 
+/* ── SESSION DETAILS ──────────────────────────────────────── */
+#session-details {
+  background: var(--cream);
+  padding: 6rem 2.5rem 7rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#session-details::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 100px;
+  background: var(--rose);
+  clip-path: ellipse(55% 100% at 48% 100%);
+}
+
+#session-details .section-inner { position: relative; z-index: 1; }
+
+.session-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .session-two-col { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.session-includes-list,
+.session-receive-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.session-includes-list li,
+.session-receive-list li {
+  padding: 0.6rem 0.75rem 0.6rem 1rem;
+  border-left: 3px solid var(--teal);
+  color: var(--mid);
+  font-size: 0.95rem;
+}
+
+.session-receive-list li { border-left-color: var(--rose); }
+
+.session-col-receive h3 { margin-bottom: 0.75rem; }
+
+/* ── PRICING ──────────────────────────────────────────────── */
+#pricing {
+  background: var(--rose);
+  padding: 6rem 2.5rem 7rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#pricing::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 100px;
+  background: var(--cream);
+  clip-path: ellipse(55% 100% at 52% 100%);
+}
+
+#pricing .section-inner { position: relative; z-index: 1; }
+#pricing h2 { color: var(--cream); -webkit-text-fill-color: var(--cream); }
+#pricing .section-label { color: rgba(246,234,227,0.7); }
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pricing-card {
+  background: var(--cream);
+  border: 2px solid var(--dark);
+  border-radius: 4px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 6px 6px 0 var(--dark);
+}
+
+.pricing-card--featured {
+  border-color: var(--teal);
+  box-shadow: 4px 4px 0 var(--teal);
+}
+
+.pricing-card--featured:hover { box-shadow: 6px 6px 0 var(--teal); }
+
+.pricing-card-label {
+  font-family: 'Special Elite', cursive;
+  font-size: 1.05rem;
+  color: var(--teal);
+}
+
+.pricing-card-price {
+  font-family: 'Special Elite', cursive;
+  font-size: 2.75rem;
+  color: var(--dark);
+  line-height: 1.1;
+}
+
+.pricing-card-duration {
+  font-size: 0.85rem;
+  color: var(--mid);
+  margin-bottom: 0.25rem;
+}
+
+.pricing-card p {
+  color: var(--mid);
+  font-size: 0.9rem;
+  flex: 1;
+  margin-bottom: 0.75rem;
+}
+
+/* ── ACCESSIBILITY ────────────────────────────────────────── */
+#accessibility {
+  background: var(--cream);
+  padding: 6rem 2.5rem 5rem;
+}
+
+#accessibility .section-inner { position: relative; z-index: 1; }
+
+.accessibility-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .accessibility-content { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.accessibility-disclaimer {
+  background: var(--peach);
+  border-radius: 4px;
+  padding: 1.75rem;
+  border-left: 4px solid var(--rose);
+}
+
+.accessibility-disclaimer h3 {
+  color: var(--dark);
+  -webkit-text-fill-color: var(--dark);
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.accessibility-disclaimer p {
+  color: var(--dark);
+  font-size: 0.9rem;
+}
+
 /* ── CTA BOX ──────────────────────────────────────────────── */
 .cta-box {
   background: var(--peach);
