@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="5" fill="#3b2f27"/>
+  <!-- rose gem — top center -->
+  <polygon points="16,3 21,9 16,15 11,9" fill="#c06a6a"/>
+  <!-- peach gem — bottom left -->
+  <polygon points="9,17 14,23 9,29 4,23" fill="#ffa384"/>
+  <!-- olive gem — bottom right -->
+  <polygon points="23,17 28,23 23,29 18,23" fill="#b8c026"/>
+</svg>
