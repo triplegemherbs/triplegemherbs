@@ -678,13 +678,31 @@ section h2 {
 .about-text .section-label { color: rgba(246,234,227,0.7); }
 .about-text h2 { color: var(--cream); -webkit-text-fill-color: var(--cream); }
 .about-text p  { color: rgba(246,234,227,0.9); font-size: 1rem; margin-bottom: 1rem; }
-.about-brand-logo {
-  max-width: 200px;
+.brand-moment {
+  background: var(--cream);
+  padding: 5rem 2.5rem 7rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-moment::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 100px;
+  background: var(--olive);
+  clip-path: ellipse(55% 100% at 52% 100%);
+}
+
+.brand-moment .section-inner { position: relative; z-index: 1; }
+
+.brand-moment-logo {
+  max-width: 300px;
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  margin-top: 2rem;
+  border-radius: 10px;
   display: block;
+  margin: 0 auto;
 }
 
 .about-text a  {
