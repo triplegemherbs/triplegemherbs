@@ -998,7 +998,12 @@ section h2 {
 
 .session-receive-list li { border-left-color: var(--rose); }
 
-.session-col-receive h3 { margin-bottom: 0.75rem; }
+.session-subheading {
+  font-family: 'Special Elite', cursive;
+  font-size: 1rem;
+  color: var(--dark);
+  margin-bottom: 0.25rem;
+}
 
 /* ── PRICING ──────────────────────────────────────────────── */
 #pricing {
