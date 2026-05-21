@@ -69,8 +69,8 @@
     var isRootPage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
     var partialsPath = isRootPage ? 'partials/' : '../partials/';
 
-    loadPartial('site-header', partialsPath + 'header.html');
-    loadPartial('site-footer', partialsPath + 'footer.html');
+    loadPartial('site-header', partialsPath + 'header.html?v=4');
+    loadPartial('site-footer', partialsPath + 'footer.html?v=4');
     initNewsletterForms();
   });
 
