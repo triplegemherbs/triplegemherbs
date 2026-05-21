@@ -1663,13 +1663,24 @@ footer.site-footer::before,
     height: 160px;
   }
 
+  .header-inner {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .site-logo-link {
+    flex: 1;
+  }
+
   .site-nav {
     display: none;
     width: 100%;
+    flex-basis: 100%;
   }
 
   .site-nav.open {
     display: block;
+    flex-basis: 100%;
     background: var(--cream);
     border-top: 1px solid var(--border);
     padding: 0.5rem 0;
