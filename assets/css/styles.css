@@ -642,14 +642,17 @@ h1 em, h2 em, h3 em {
 }
 
 /* ── ABOUT — rose ─────────────────────────────────────────── */
-#about {
+#about,
+#about-bio {
   background: var(--rose);
   padding-top: 7rem;
   padding-bottom: 7rem;
   overflow: hidden;
+  position: relative;
 }
 
-#about::before {
+#about::before,
+#about-bio::before {
   display: block;
   content: '';
   position: absolute;
@@ -659,6 +662,7 @@ h1 em, h2 em, h3 em {
   clip-path: ellipse(55% 100% at 52% 0%);
 }
 
+/* Homepage: rose → olive */
 #about::after {
   content: '';
   position: absolute;
@@ -668,8 +672,20 @@ h1 em, h2 em, h3 em {
   clip-path: ellipse(58% 100% at 48% 100%);
 }
 
+/* About page: rose → cream */
+#about-bio::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 110px;
+  background: var(--cream);
+  clip-path: ellipse(58% 100% at 48% 100%);
+}
+
 #about .section-inner,
-#about .about-container {
+#about .about-container,
+#about-bio .section-inner,
+#about-bio .about-container {
   position: relative;
   z-index: 1;
   display: grid;
@@ -678,6 +694,65 @@ h1 em, h2 em, h3 em {
   align-items: start;
   max-width: 1080px;
   margin: 0 auto;
+}
+
+/* ── CREDENTIALS ──────────────────────────────────────────── */
+#credentials {
+  background: var(--cream);
+  padding: 5rem 2.5rem 6rem;
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.credential-group h3 {
+  font-size: 1rem;
+  color: var(--teal);
+  margin-bottom: 0.75rem;
+}
+
+.credentials-list {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.credentials-list li {
+  font-size: 0.95rem;
+  color: var(--mid);
+  padding-left: 1rem;
+  border-left: 2px solid var(--teal);
+  line-height: 1.5;
+}
+
+/* ── ABOUT PAGE TESTIMONIAL ───────────────────────────────── */
+#about-testimonial {
+  background: var(--peach);
+  padding: 6rem 2.5rem 7rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#about-testimonial::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 100px;
+  background: var(--cream);
+  clip-path: ellipse(55% 100% at 52% 100%);
+}
+
+#about-testimonial .section-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .about-photo-wrap { position: relative; }
@@ -1634,7 +1709,9 @@ footer.site-footer::before,
   .hero-image { align-self: center; }
 
   #about .section-inner,
-  #about .about-container { grid-template-columns: 1fr; gap: 2rem; }
+  #about .about-container,
+  #about-bio .section-inner,
+  #about-bio .about-container { grid-template-columns: 1fr; gap: 2rem; }
 
   .photo-gallery {
     columns: 2;
