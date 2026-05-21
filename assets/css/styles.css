@@ -91,7 +91,7 @@ header,
   background: var(--cream);
   border-bottom: 1px solid var(--border);
   padding: 0 2.5rem;
-  height: 80px;
+  height: 96px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,7 +139,7 @@ header .site-logo {
 }
 
 .site-logo-banner {
-  height: 62px;
+  height: 76px;
   width: auto;
 }
 
