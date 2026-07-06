@@ -66,8 +66,9 @@
   }
 
   document.addEventListener('DOMContentLoaded', function(){
-    var isRootPage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
-    var partialsPath = isRootPage ? 'partials/' : '../partials/';
+    var segments = window.location.pathname.split('/').filter(Boolean).length;
+    var prefix = segments === 0 ? '' : '../'.repeat(Math.max(0, segments - 1));
+    var partialsPath = prefix + 'partials/';
 
     loadPartial('site-header', partialsPath + 'header.html?v=4');
     loadPartial('site-footer', partialsPath + 'footer.html?v=4');

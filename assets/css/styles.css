@@ -288,6 +288,51 @@ section {
   position: relative;
 }
 
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.chip--soft {
+  background: rgba(82, 121, 110, 0.12);
+  color: var(--teal);
+}
+
+.post-article {
+  background: rgba(255,255,255,0.85);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 2.25rem;
+  box-shadow: 0 8px 28px rgba(59,47,39,0.06);
+}
+
+.post-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.post-content ul {
+  margin-left: 1.25rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.post-actions {
+  margin-top: 2rem;
+}
+
+.mt-2 { margin-top: 2rem; }
+.text-center { text-align: center; }
+
 /* kill old gradient top-border */
 section::before { display: none; }
 
