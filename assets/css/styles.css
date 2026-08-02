@@ -669,12 +669,12 @@ h1 em, h2 em, h3 em {
 
 .testimonial-text {
   font-family: 'Libre Baskerville', Georgia, serif;
-  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
   line-height: 1.7;
   color: var(--dark);
-  max-width: 780px;
+  max-width: 700px;
   font-style: italic;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .testimonial-attr {
@@ -758,41 +758,36 @@ h1 em, h2 em, h3 em {
 .quick-view-card {
   position: relative;
   z-index: 1;
-  max-width: 1080px;
+  max-width: 620px;
   margin: 3.5rem auto 0;
   background: var(--cream);
   border-radius: 12px;
-  padding: 2rem 2.25rem;
+  padding: 2.5rem 2.75rem;
   box-shadow: 0 14px 34px rgba(59,47,39,0.22);
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+  text-align: center;
 }
 
 .quick-view-name {
-  flex: 0 0 auto;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--dark);
   margin-bottom: 0;
-  padding-right: 2rem;
-  border-right: 2px solid var(--border);
-  white-space: nowrap;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border);
 }
 
 .quick-view-list {
-  flex: 1 1 auto;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem 1.75rem;
-  margin-bottom: 0;
+  gap: 1rem;
+  margin: 1.75rem 0 2.25rem;
+  text-align: left;
 }
 
 .quick-view-list li {
   position: relative;
-  padding-left: 1.2rem;
-  font-size: 0.88rem;
-  line-height: 1.5;
+  padding-left: 1.5rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
   color: var(--mid);
 }
 
@@ -800,7 +795,7 @@ h1 em, h2 em, h3 em {
   content: '';
   position: absolute;
   left: 0;
-  top: 0.5em;
+  top: 0.65em;
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -808,8 +803,9 @@ h1 em, h2 em, h3 em {
 }
 
 .quick-view-cta {
-  flex: 0 0 auto;
-  white-space: nowrap;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 /* ── CREDENTIALS ──────────────────────────────────────────── */
@@ -818,15 +814,31 @@ h1 em, h2 em, h3 em {
   padding: 5rem 2.5rem 6rem;
 }
 
+.section-heading {
+  display: inline-block;
+  border-bottom: 3px solid var(--rose);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
 .training-text {
   max-width: 720px;
   margin-bottom: 2.5rem;
+  background: rgba(255,255,255,0.85);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 2.25rem;
+  box-shadow: 0 8px 28px rgba(59,47,39,0.06);
 }
 
 .training-text p {
   color: var(--dark);
   font-size: 1.02rem;
   line-height: 1.7;
+}
+
+.training-text p:last-child {
+  margin-bottom: 0;
 }
 
 .training-cta-text {
@@ -1923,23 +1935,11 @@ footer.site-footer::before,
   .about-page-title { margin-bottom: 2.5rem; }
 
   .quick-view-card {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
+    padding: 2rem 1.5rem;
   }
 
-  .quick-view-name {
-    padding-right: 0;
-    padding-bottom: 1rem;
-    border-right: none;
-    border-bottom: 2px solid var(--border);
-    white-space: normal;
-  }
-
-  .quick-view-list { grid-template-columns: 1fr; gap: 0.75rem; }
-
-  .quick-view-cta { width: 100%; text-align: center; }
+  .quick-view-list { margin: 1.5rem 0 2rem; }
 
   .photo-gallery {
     columns: 2;
