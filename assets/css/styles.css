@@ -1530,6 +1530,22 @@ h1 em, h2 em, h3 em {
 .pub-item--rose  .pub-venue { color: var(--rose); }
 .pub-year { font-family: 'Special Elite', serif; font-size: 0.85rem; color: var(--mid); white-space: nowrap; }
 
+/* ── WRITING (combined Publications / Field Notes / Newsletter) ── */
+.type-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.writing-group + .writing-group {
+  margin-top: 4rem;
+}
+
+.writing-group .section-heading {
+  margin-bottom: 2rem;
+}
+
 /* ── FAQ ─────────────────────────────────────────────────── */
 #faq { background: var(--cream); padding: 5rem 2.5rem 6rem; }
 .faq-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; max-width: 720px; }
