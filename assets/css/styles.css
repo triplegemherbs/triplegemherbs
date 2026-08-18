@@ -1117,13 +1117,13 @@ h1 em, h2 em, h3 em {
 }
 
 .page-hero .section-inner { position: relative; z-index: 1; }
-.page-hero h2 { color: var(--dark); -webkit-text-fill-color: var(--dark); }
+.page-hero h1, .page-hero h2 { color: var(--dark); -webkit-text-fill-color: var(--dark); }
 .page-hero p { color: rgba(59,47,39,0.8); max-width: 660px; }
 
 .page-hero--peach { background: var(--peach); }
 
 .page-hero--rose { background: var(--rose); }
-.page-hero--rose h2 { color: var(--cream); -webkit-text-fill-color: var(--cream); }
+.page-hero--rose h1, .page-hero--rose h2 { color: var(--cream); -webkit-text-fill-color: var(--cream); }
 .page-hero--rose .section-label { color: rgba(246,234,227,0.7); }
 .page-hero--rose p { color: rgba(246,234,227,0.9); }
 
@@ -1175,7 +1175,7 @@ h1 em, h2 em, h3 em {
 
 #consult-hero .section-inner { position: relative; z-index: 1; }
 
-#consult-hero h2 {
+#consult-hero h1 {
   max-width: 680px;
 }
 
