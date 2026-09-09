@@ -1214,12 +1214,19 @@ h1 em, h2 em, h3 em {
 /* ── SESSION DETAILS ──────────────────────────────────────── */
 #session-details {
   background: var(--cream);
-  padding: 6rem 2.5rem 7rem;
+  padding: 6rem 2.5rem 2rem;
   position: relative;
   overflow: hidden;
 }
 
-#session-details::after {
+#consult-portrait {
+  background: var(--cream);
+  padding: 2rem 2.5rem 7rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#consult-portrait::after {
   content: '';
   position: absolute;
   bottom: -2px; left: 0; right: 0;
@@ -1227,6 +1234,8 @@ h1 em, h2 em, h3 em {
   background: var(--rose);
   clip-path: ellipse(55% 100% at 48% 100%);
 }
+
+#consult-portrait .section-inner { position: relative; z-index: 1; }
 
 #session-details .section-inner { position: relative; z-index: 1; }
 
